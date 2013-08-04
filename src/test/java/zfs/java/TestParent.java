@@ -19,14 +19,13 @@ import java.util.logging.Logger;
  *
  */
 public class TestParent {
-
+    
     private final static Logger LOG = Logger.getLogger(TestParent.class.getName());
     private final static String SEP = File.separator;
-
     protected void parseFile(String path, ProcessParser pp) {
-        File file = new File("src" + SEP + "test" + SEP + path);
+        File file = new File("src"+SEP+"test"+SEP+path);
         if (file.exists()) {
-            LOG.log(Level.INFO, "\n\nReading: {0}\n", path);
+            LOG.log(Level.INFO, "\n\nReading: {0}\n\n", path);
             try {
                 BufferedReader br = new BufferedReader(new FileReader(file));
                 pp.parse(br);
@@ -40,7 +39,7 @@ public class TestParent {
             LOG.log(Level.SEVERE, "file: {0} does not exists!", file.getAbsolutePath());
         }
     }
-
+    
     protected Object first(final Object collection) {
         if (collection != null) {
             if (collection instanceof List) {
@@ -64,7 +63,7 @@ public class TestParent {
         }
         return null;
     }
-
+    
     protected Object entry(final Object collection, final int index) {
         if (collection != null) {
             if (collection instanceof List) {
@@ -78,19 +77,19 @@ public class TestParent {
                 if (set.size() >= index) {
                     return set.toArray()[index];
                 }
-
+                
             }
             if (collection instanceof Map) {
                 Map map = (Map) collection;
                 if (map.size() >= index) {
                     return map.get(map.keySet().toArray()[index]);
                 }
-
+                
             }
         }
         return null;
     }
-
+    
     protected Object last(final Object collection) {
         if (collection != null) {
             if (collection instanceof List) {
@@ -114,48 +113,48 @@ public class TestParent {
         }
         return null;
     }
-
+    
     protected void debug(Object obj) {
         debug(obj, (Object) null);
     }
-
+    
     protected void debug(Object obj, Object... args) {
         StringBuilder sb = new StringBuilder("\n");
         if (args != null && args.length > 0) {
-            sb.append("\tDebugging '").append(args[0]).append("': \n");
+            sb.append("Debugging '").append(args[0]).append("': \n");
         }
         sb = debugEntry(sb, obj);
         LOG.log(Level.INFO, sb.toString());
     }
-
+    
     protected StringBuilder debugEntry(StringBuilder sb, Object obj) {
         if (obj == null) {
-            sb.append("\t\tis NULL \n");
+            sb.append("\tis NULL \n");
         } else if (obj instanceof List) {
-            sb.append("\t\tList: \n");
+            sb.append("\tList: \n");
             List l = (List) obj;
             for (Object value : l) {
-                sb.append("\t\t\t").append(value.toString()).append("\n");
+                sb.append("\t\t").append(value.toString()).append("\n");
             }
         } else if (obj instanceof Set) {
-            sb.append("\t\tSet: \n");
+            sb.append("\tSet: \n");
             Set s = (Set) obj;
             for (Object value : s) {
-                sb.append("\t\t\t").append(value.toString()).append("\n");
+                sb.append("\t\t").append(value.toString()).append("\n");
             }
         } else if (obj instanceof Map) {
-            sb.append("\t\tMap: \n");
+            sb.append("\tMap: \n");
             Map m = (Map) obj;
             for (Object key : m.keySet()) {
-                sb.append("\t\t\t").append(key.toString()).append(":\n").append(m.get(key).toString()).append("\n");
+                sb.append("\t\t").append(key.toString()).append(":\n").append(m.get(key).toString()).append("\n");
             }
         } else {
-            sb.append("\t\t").append(obj.getClass().getName()).append(": \n");
-            sb.append(prefixLine("\t\t", obj.toString())).append("\n");
+            sb.append("\t").append(obj.getClass().getName()).append(": \n");
+            sb.append(prefixLine("\t", obj.toString())).append("\n");
         }
         return sb;
     }
-
+    
     private String prefixLine(final String prefix, final String output) {
         StringBuilder sb = new StringBuilder();
         for (String line : output.split("\n")) {
