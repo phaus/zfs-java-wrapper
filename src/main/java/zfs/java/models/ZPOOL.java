@@ -62,7 +62,6 @@ public class ZPOOL extends ZFSElement {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append(host).append(":").append("\n");
-        sb.append(name).append("\t\t").append(super.toString()).append("\n");
         if (scan != null) {
             sb.append("scan: ").append(scan).append("\n");
         }
@@ -81,6 +80,7 @@ public class ZPOOL extends ZFSElement {
         if (errors != null) {
             sb.append("errors: ").append(errors).append("\n");
         }
+        sb.append(name).append("\t\t").append(super.toString()).append("\n");
         for (Pool pool : pools) {
             sb.append(pool).append("\n");
         }

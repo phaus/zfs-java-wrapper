@@ -8,8 +8,6 @@ AVAILABLE DISK SELECTIONS:
           /pci@1e,600000/pci@0/pci@a/pci@0/pci@8/scsi@1/sd@1,0
        2. c2t3d0 <SUN72G cyl 14087 alt 2 hd 24 sec 424>
           /pci@1e,600000/pci@0/pci@a/pci@0/pci@8/scsi@1/sd@2,0
-       3. c1t3d0 <SUN72G cyl 14087 alt 2 hd 24 sec 424>
+       3. c2t0d0s0 <SUN72G cyl 14087 alt 2 hd 24 sec 424>
           /pci@1e,600000/pci@0/pci@a/pci@0/pci@8/scsi@1/sd@3,0
-       4. c2t3d0 <IFT-A12U-G2421-347R-931.26GB>
-          /pci@1f,700000/pci@0/LSILogic,scsi@2/sd@0,0
 Specify disk (enter its number): 

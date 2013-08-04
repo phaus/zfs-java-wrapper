@@ -19,7 +19,6 @@ public class ZFSElement {
         UNAVAIL("UNAVAIL"),
         INUSE("INUSE");
         private String value;
-
         State(String value) {
             this.value = value;
         }
@@ -35,7 +34,7 @@ public class ZFSElement {
     // Public Modifier are correct here, see http://www.playframework.org/documentation/1.2.5/model .
     //CHECKSTYLE:OFF
     public State state;
-    public String message;
+    public String message = "";
     public int read = 0;
     public int write = 0;
     public int cksum = 0;
@@ -50,6 +49,6 @@ public class ZFSElement {
 
     @Override
     public String toString() {
-        return state.toString() + "\t" + read + "\t" + write + "\t" + cksum + "\t" + getMessage();
+        return String.format("%-12s", state.toString()) + "\t" + read + "\t" + write + "\t" + cksum + "\t" + getMessage();
     }
 }
