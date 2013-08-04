@@ -1,0 +1,58 @@
+  pool: zpool01
+ state: ONLINE
+ scrub: none requested
+config:
+
+        NAME        STATE     READ WRITE CKSUM
+        zpool01     ONLINE       0     0     0
+          raidz2    ONLINE       0     0     0
+            c4t1d0  ONLINE       0     0     0
+            c3t1d0  ONLINE       0     0     0
+            c6t1d0  ONLINE       0     0     0
+            c5t1d0  ONLINE       0     0     0
+            c1t1d0  ONLINE       0     0     0
+            c0t1d0  ONLINE       0     0     0
+            c3t0d0  ONLINE       0     0     0
+            c6t0d0  ONLINE       0     0     0
+            c5t0d0  ONLINE       0     0     0
+            c1t0d0  ONLINE       0     0     0
+            c0t0d0  ONLINE       0     0     0
+          raidz2    ONLINE       0     0     0
+            c4t3d0  ONLINE       0     0     0
+            c3t3d0  ONLINE       0     0     0
+            c6t3d0  ONLINE       0     0     0
+            c5t3d0  ONLINE       0     0     0
+            c1t3d0  ONLINE       0     0     0
+            c0t3d0  ONLINE       0     0     0
+            c3t2d0  ONLINE       0     0     0
+            c6t2d0  ONLINE       0     0     0
+            c5t2d0  ONLINE       0     0     0
+            c1t2d0  ONLINE       0     0     0
+            c0t2d0  ONLINE       0     0     0
+          raidz2    ONLINE       0     0     0
+            c4t5d0  ONLINE       0     0     0
+            c3t5d0  ONLINE       0     0     0
+            c6t5d0  ONLINE       0     0     0
+            c5t5d0  ONLINE       0     0     0
+            c1t5d0  ONLINE       0     0     0
+            c0t5d0  ONLINE       0     0     0
+            c3t4d0  ONLINE       0     0     0
+            c6t4d0  ONLINE       0     0     0
+            c5t4d0  ONLINE       0     0     0
+            c1t4d0  ONLINE       0     0     0
+            c0t4d0  ONLINE       0     0     0
+          raidz2    ONLINE       0     0     0
+            c4t7d0  ONLINE       0     0     0
+            c3t7d0  ONLINE       0     0     0
+            c6t7d0  ONLINE       0     0     0
+            c5t7d0  ONLINE       0     0     0
+            c1t7d0  ONLINE       0     0     0
+            c0t7d0  ONLINE       0     0     0
+            c3t6d0  ONLINE       0     0     0
+            c6t6d0  ONLINE       0     0     0
+            c5t6d0  ONLINE       0     0     0
+            c1t6d0  ONLINE       0     0     0
+            c0t6d0  ONLINE       0     0     0
+        spares
+          c4t2d0    AVAIL
+          c4t6d0    AVAIL

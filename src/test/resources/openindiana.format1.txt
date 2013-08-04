@@ -1,0 +1,25 @@
+Searching for disks...done
+
+
+AVAILABLE DISK SELECTIONS:
+       0. c4t0d0 <ATA-VBOXHARDDISK-1.0 cyl 4093 alt 2 hd 128 sec 32>
+          /pci@0,0/pci8086,2829@d/disk@0,0
+       1. c5t0d0 <VBOX-HARDDISK-1.0-512.00MB>
+          /pci@0,0/pci1000,8000@16/sd@0,0
+       2. c5t1d0 <VBOX-HARDDISK-1.0-512.00MB>
+          /pci@0,0/pci1000,8000@16/sd@1,0
+       3. c5t2d0 <VBOX-HARDDISK-1.0-512.00MB>
+          /pci@0,0/pci1000,8000@16/sd@2,0
+       4. c5t3d0 <VBOX-HARDDISK-1.0-512.00MB>
+          /pci@0,0/pci1000,8000@16/sd@3,0
+       5. c5t4d0 <VBOX-HARDDISK-1.0-1.00GB>
+          /pci@0,0/pci1000,8000@16/sd@4,0
+       6. c5t5d0 <VBOX-HARDDISK-1.0-1.00GB>
+          /pci@0,0/pci1000,8000@16/sd@5,0
+       7. c5t6d0 <VBOX-HARDDISK-1.0-1.00GB>
+          /pci@0,0/pci1000,8000@16/sd@6,0
+       8. c5t7d0 <VBOX-HARDDISK-1.0-1.00GB>
+          /pci@0,0/pci1000,8000@16/sd@7,0
+       9. c6t0d0 <VBOX-HARDDISK-1.0 cyl 4094 alt 2 hd 128 sec 32>
+          /pci@0,0/pci1000,8000@14/sd@0,0
+Specify disk (enter its number): 

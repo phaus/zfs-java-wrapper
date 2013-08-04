@@ -1,0 +1,7 @@
+NAME                      USED  AVAIL  REFER  MOUNTPOINT
+tank                     1.89T  1.68T  1.48T  /mnt/tank
+tank/backup               143G  1.68T  10.3M  /mnt/tank/backup
+tank/backup/imotep        143G  1.68T  32.6K  /mnt/tank/backup/imotep
+tank/backup/imotep/base   143G  1.68T   142G  /mnt/tank/backup/imotep/base
+tank/jail                1.23G  1.68T  1.17G  /mnt/tank/jail
+tank/software            90.3M  1.68T  90.2M  /mnt/tank/software

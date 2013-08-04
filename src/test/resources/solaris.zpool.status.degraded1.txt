@@ -1,0 +1,21 @@
+  pool: zeepool
+ state: DEGRADED
+status: One or more devices could not be opened.  Sufficient replicas exist for
+        the pool to continue functioning in a degraded state.
+action: Attach the missing device and online it using 'zpool online'.
+   see: http://www.sun.com/msg/ZFS-8000-D3
+ scrub: resilver completed after 0h12m with 0 errors on Thu Aug 28 09:29:43 2008
+config:
+
+        NAME                 STATE     READ WRITE CKSUM
+        zeepool              DEGRADED     0     0     0
+          mirror             DEGRADED     0     0     0
+            c1t2d0           ONLINE       0     0     0
+            spare            DEGRADED     0     0     0
+              c2t1d0         UNAVAIL      0     0     0  cannot open
+              c2t3d0         ONLINE       0     0     0
+        spares
+          c1t3d0             AVAIL   
+          c2t3d0             INUSE     currently in use
+
+errors: No known data errors

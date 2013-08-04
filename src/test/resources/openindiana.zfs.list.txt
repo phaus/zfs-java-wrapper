@@ -1,0 +1,9 @@
+NAME                      USED  AVAIL  REFER  MOUNTPOINT
+rpool1                   2,63G  5,19G    45K  /rpool1
+rpool1/ROOT              1,59G  5,19G    31K  legacy
+rpool1/ROOT/openindiana  1,59G  5,19G  1,59G  /
+rpool1/dump               512M  5,19G   512M  -
+rpool1/export              98K  5,19G    32K  /export
+rpool1/export/home         66K  5,19G    32K  /export/home
+rpool1/export/home/user    34K  5,19G    34K  /export/home/user
+rpool1/swap               544M  5,59G   132M  -

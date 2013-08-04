@@ -1,0 +1,47 @@
+  pool: dummy1
+ state: ONLINE
+  scan: resilvered 109K in 0h0m with 0 errors on Sat Oct 20 18:55:51 2012
+config:
+
+        NAME        STATE     READ WRITE CKSUM
+        dummy1      ONLINE       0     0     0
+          mirror-0  ONLINE       0     0     0
+            c4t1d0  ONLINE       0     0     0
+            c4t2d0  ONLINE       0     0     0
+            c4t3d0  ONLINE       0     0     0
+
+errors: No known data errors
+
+  pool: rpool1
+ state: ONLINE
+  scan: none requested
+config:
+
+        NAME        STATE     READ WRITE CKSUM
+        rpool1      ONLINE       0     0     0
+          c4t0d0s0  ONLINE       0     0     0
+
+errors: No known data errors
+
+  pool: tank2
+ state: ONLINE
+  scan: none requested
+config:
+
+        NAME        STATE     READ WRITE CKSUM
+        tank2       ONLINE       0     0     0
+          mirror-0  ONLINE       0     0     0
+            c6t0d0  ONLINE       0     0     0
+            c6t1d0  ONLINE       0     0     0
+          mirror-1  ONLINE       0     0     0
+            c6t2d0  ONLINE       0     0     0
+            c6t3d0  ONLINE       0     0     0
+        logs
+          mirror-2  ONLINE       0     0     0
+            c6t6d0  ONLINE       0     0     0
+            c6t7d0  ONLINE       0     0     0
+        cache
+          c6t4d0    ONLINE       0     0     0
+          c6t5d0    ONLINE       0     0     0
+
+errors: No known data errors

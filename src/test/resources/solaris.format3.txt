@@ -1,0 +1,61 @@
+Searching for disks...done
+
+
+AVAILABLE DISK SELECTIONS:
+       0. c0t0d0 <SUN72G cyl 14087 alt 2 hd 24 sec 424>
+          /pci@1e,600000/pci@0/pci@a/pci@0/pci@8/scsi@1/sd@0,0
+       1. c0t1d0 <SUN72G cyl 14087 alt 2 hd 24 sec 424>
+          /pci@1e,600000/pci@0/pci@a/pci@0/pci@8/scsi@1/sd@1,0
+       2. c0t2d0 <SUN72G cyl 14087 alt 2 hd 24 sec 424>
+          /pci@1e,600000/pci@0/pci@a/pci@0/pci@8/scsi@1/sd@2,0
+       3. c0t3d0 <SUN72G cyl 14087 alt 2 hd 24 sec 424>
+          /pci@1e,600000/pci@0/pci@a/pci@0/pci@8/scsi@1/sd@3,0
+       4. c1t0d0 <IFT-A12U-G2421-347R-931.26GB>
+          /pci@1f,700000/pci@0/LSILogic,scsi@2/sd@0,0
+       5. c1t0d1 <IFT-A12U-G2421-347R-931.26GB>
+          /pci@1f,700000/pci@0/LSILogic,scsi@2/sd@0,1
+       6. c1t0d2 <IFT-A12U-G2421-347R-931.26GB>
+          /pci@1f,700000/pci@0/LSILogic,scsi@2/sd@0,2
+       7. c1t0d3 <IFT-A12U-G2421-347R-931.26GB>
+          /pci@1f,700000/pci@0/LSILogic,scsi@2/sd@0,3
+       8. c1t0d4 <IFT-A12U-G2421-347R-931.26GB>
+          /pci@1f,700000/pci@0/LSILogic,scsi@2/sd@0,4
+       9. c1t0d5 <IFT-A12U-G2421-347R-931.26GB>
+          /pci@1f,700000/pci@0/LSILogic,scsi@2/sd@0,5
+      10. c1t0d6 <IFT-A12U-G2421-347R-931.26GB>
+          /pci@1f,700000/pci@0/LSILogic,scsi@2/sd@0,6
+      11. c1t0d7 <IFT-A12U-G2421-347R-931.26GB>
+          /pci@1f,700000/pci@0/LSILogic,scsi@2/sd@0,7
+      12. c1t0d8 <IFT-A12U-G2421-347R-931.26GB>
+          /pci@1f,700000/pci@0/LSILogic,scsi@2/sd@0,8
+      13. c1t0d9 <IFT-A12U-G2421-347R-931.26GB>
+          /pci@1f,700000/pci@0/LSILogic,scsi@2/sd@0,9
+      14. c1t0d10 <IFT-A12U-G2421-347R-931.26GB>
+          /pci@1f,700000/pci@0/LSILogic,scsi@2/sd@0,a
+      15. c1t0d11 <IFT-A12U-G2421-347R-931.26GB>
+          /pci@1f,700000/pci@0/LSILogic,scsi@2/sd@0,b
+      16. c2t0d0 <IFT-A12U-G2421-347R-931.26GB>
+          /pci@1f,700000/pci@0,2/scsi@1,1/sd@0,0
+      17. c2t0d1 <IFT-A12U-G2421-347R-931.26GB>
+          /pci@1f,700000/pci@0,2/scsi@1,1/sd@0,1
+      18. c2t0d2 <IFT-A12U-G2421-347R-931.26GB>
+          /pci@1f,700000/pci@0,2/scsi@1,1/sd@0,2
+      19. c2t0d3 <IFT-A12U-G2421-347R-931.26GB>
+          /pci@1f,700000/pci@0,2/scsi@1,1/sd@0,3
+      20. c2t0d4 <IFT-A12U-G2421-347R-931.26GB>
+          /pci@1f,700000/pci@0,2/scsi@1,1/sd@0,4
+      21. c2t0d5 <IFT-A12U-G2421-347R-931.26GB>
+          /pci@1f,700000/pci@0,2/scsi@1,1/sd@0,5
+      22. c2t0d6 <IFT-A12U-G2421-347R-931.26GB>
+          /pci@1f,700000/pci@0,2/scsi@1,1/sd@0,6
+      23. c2t0d7 <IFT-A12U-G2421-347R-931.26GB>
+          /pci@1f,700000/pci@0,2/scsi@1,1/sd@0,7
+      24. c2t0d8 <IFT-A12U-G2421-347R-931.26GB>
+          /pci@1f,700000/pci@0,2/scsi@1,1/sd@0,8
+      25. c2t0d9 <IFT-A12U-G2421-347R-931.26GB>
+          /pci@1f,700000/pci@0,2/scsi@1,1/sd@0,9
+      26. c2t0d10 <IFT-A12U-G2421-347R-931.26GB>
+          /pci@1f,700000/pci@0,2/scsi@1,1/sd@0,a
+      27. c2t0d11 <IFT-A12U-G2421-347R-931.26GB>
+          /pci@1f,700000/pci@0,2/scsi@1,1/sd@0,b
+Specify disk (enter its number): 

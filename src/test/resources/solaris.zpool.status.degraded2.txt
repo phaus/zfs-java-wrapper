@@ -1,0 +1,18 @@
+  pool: rpool
+ state: DEGRADED
+status: One or more devices has experienced an error resulting in data
+        corruption. Applications may be affected.
+
+action: Restore the file in question if possible. Otherwise restore the
+        entire pool from backup.
+
+see: http://www.sun.com/msg/ZFS-8000-8A
+scrub: scrub completed after 0h2m with 1 errors on Tue Mar 11 13:12:42 2008
+
+config:
+       NAME        STATE     READ WRITE CKSUM
+       rpool    DEGRADED     0     0     9
+         c2t0d0s0  DEGRADED     0     0     9
+
+errors: Permanent errors have been detected in the following files:
+           /mnt/root/lib/amd64/libc.so.1

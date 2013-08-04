@@ -1,0 +1,2 @@
+NAME   SIZE   USED  AVAIL    CAP  HEALTH  ALTROOT
+tank  5.44T  2.84T  2.60T    52%  ONLINE  /mnt

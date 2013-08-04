@@ -1,0 +1,33 @@
+  pool: dp1
+ state: DEGRADED
+status: One or more devices has experienced an error resulting in data
+        corruption.  Applications may be affected.
+action: Restore the file in question if possible.  Otherwise restore the
+        entire pool from backup.
+   see: 
+ scrub: scrub completed after 14h14m with 65 errors on Thu Apr  5 05:25:13 2012
+config:
+
+        NAME           STATE     READ WRITE CKSUM
+        dp1            DEGRADED     0     0   154
+          raidz1-0     DEGRADED     0     0   308
+            spare-0    DEGRADED     0     0     0
+              c2t0d0   DEGRADED     0     0     0  too many errors
+              c2t0d11  ONLINE       0     0     0
+            spare-1    DEGRADED     0     0     0
+              c2t0d1   DEGRADED     0     0     0  too many errors
+              c2t0d10  ONLINE       0     0     0
+            c2t0d2     DEGRADED     0     0     0  too many errors
+            c2t0d3     DEGRADED     0     0     0  too many errors
+            c2t0d4     DEGRADED     0     0     0  too many errors
+          raidz1-1     ONLINE       0     0     0
+            c2t0d5     ONLINE       0     0     0
+            c2t0d6     ONLINE       0     0     0
+            c2t0d7     ONLINE       0     0     0
+            c2t0d8     ONLINE       0     0     0
+            c2t0d9     ONLINE       0     0     0
+        spares
+          c2t0d10      INUSE     currently in use
+          c2t0d11      INUSE     currently in use
+
+errors: Permanent errors have been detected in the following files...

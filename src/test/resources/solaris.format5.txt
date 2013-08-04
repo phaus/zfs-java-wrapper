@@ -1,0 +1,13 @@
+Searching for disks...done
+
+
+AVAILABLE DISK SELECTIONS:
+       0. c4t60060160C166120064F22DA86C29DC11d0s6 <SUN72G cyl 14087 alt 2 hd 24 sec 424>
+          /pci@1e,600000/pci@0/pci@a/pci@0/pci@8/scsi@1/sd@0,0
+       1. c4t60060160C166120099E5419F6C29DC11d0s6 <SUN72G cyl 14087 alt 2 hd 24 sec 424>
+          /pci@1e,600000/pci@0/pci@a/pci@0/pci@8/scsi@1/sd@1,0
+       2. c4t60060160C166120064F22DA86C29DC11d0s6 <SUN72G cyl 14087 alt 2 hd 24 sec 424>
+          /pci@1e,600000/pci@0/pci@a/pci@0/pci@8/scsi@1/sd@2,0
+       3. c4t60060160C16612006A4583D66C29DC11d0s6 <SUN72G cyl 14087 alt 2 hd 24 sec 424>
+          /pci@1e,600000/pci@0/pci@a/pci@0/pci@8/scsi@1/sd@3,0          
+Specify disk (enter its number): 

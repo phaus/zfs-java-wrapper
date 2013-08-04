@@ -1,0 +1,55 @@
+  pool: rpool1
+ state: ONLINE
+status: Some supported features are not enabled on the pool. The pool can
+        still be used, but some features are unavailable.
+action: Enable all features using 'zpool upgrade'. Once this is done,
+        the pool may no longer be accessible by software that does not support
+        the features. See zpool-features(5) for details.
+  scan: none requested
+config:
+
+        NAME        STATE     READ WRITE CKSUM
+        rpool1      ONLINE       0     0     0
+          c4t0d0s0  ONLINE       0     0     0
+
+errors: No known data errors
+
+  pool: tank
+ state: ONLINE
+  scan: none requested
+config:
+
+        NAME        STATE     READ WRITE CKSUM
+        tank        ONLINE       0     0     0
+          raidz1-0  ONLINE       0     0     0
+            c5t0d0  ONLINE       0     0     0
+            c5t1d0  ONLINE       0     0     0
+            c5t2d0  ONLINE       0     0     0
+          raidz1-1  ONLINE       0     0     0
+            c5t4d0  ONLINE       0     0     0
+            c5t5d0  ONLINE       0     0     0
+            c5t6d0  ONLINE       0     0     0
+
+errors: No known data errors
+
+  pool: tank2
+ state: ONLINE
+  scan: none requested
+config:
+
+        NAME        STATE     READ WRITE CKSUM
+        tank2       ONLINE       0     0     0
+          mirror-0  ONLINE       0     0     0
+            c6t0d0  ONLINE       0     0     0
+            c6t1d0  ONLINE       0     0     0
+          mirror-1  ONLINE       0     0     0
+            c6t2d0  ONLINE       0     0     0
+            c6t3d0  ONLINE       0     0     0
+        logs
+          c6t6d0    ONLINE       0     0     0
+          c6t7d0    ONLINE       0     0     0
+        cache
+          c6t4d0    ONLINE       0     0     0
+          c6t5d0    ONLINE       0     0     0
+
+errors: No known data errors

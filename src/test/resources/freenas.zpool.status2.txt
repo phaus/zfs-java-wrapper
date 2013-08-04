@@ -1,0 +1,15 @@
+  pool: tank2
+ state: ONLINE
+  scan: scrub in progress since Sun Oct 28 15:37:50 2012
+        300G scanned out of 2.62T at 171M/s, 3h57m to go
+        0 repaired, 11.18% done
+config:
+
+	NAME                                            STATE     READ WRITE CKSUM
+	tank2                                           ONLINE       0     0     0
+	  raidz1-0                                      ONLINE       0     0     0
+	    gptid/338e9703-4a84-11e1-b3ba-3c4a92744a81  ONLINE       0     0     0
+	    gptid/34b0b4a8-4a84-11e1-b3ba-3c4a92744a81  ONLINE       0     0     0
+	    gptid/35c4a19f-4a84-11e1-b3ba-3c4a92744a81  ONLINE       0     0     0
+
+errors: No known data errors

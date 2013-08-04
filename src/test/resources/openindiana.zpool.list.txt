@@ -1,0 +1,2 @@
+NAME     SIZE  ALLOC   FREE  EXPANDSZ    CAP  DEDUP  HEALTH  ALTROOT
+rpool1  7,94G  2,22G  5,71G         -    28%  1.00x  ONLINE  -

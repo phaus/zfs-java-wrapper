@@ -1,0 +1,101 @@
+Searching for disks...done
+
+
+AVAILABLE DISK SELECTIONS:
+       0. c0t0d0 <ATA-HITACHI HUA7210S-A90A-931.51GB>
+          /pci@0,0/pci1022,7458@1/pci11ab,11ab@1/disk@0,0
+       1. c0t1d0 <ATA-HITACHI HUA7210S-A90A-931.51GB>
+          /pci@0,0/pci1022,7458@1/pci11ab,11ab@1/disk@1,0
+       2. c0t2d0 <ATA-HITACHI HUA7210S-A90A-931.51GB>
+          /pci@0,0/pci1022,7458@1/pci11ab,11ab@1/disk@2,0
+       3. c0t3d0 <ATA-HITACHI HUA7210S-A90A-931.51GB>
+          /pci@0,0/pci1022,7458@1/pci11ab,11ab@1/disk@3,0
+       4. c0t4d0 <ATA-HITACHI HUA7210S-A90A-931.51GB>
+          /pci@0,0/pci1022,7458@1/pci11ab,11ab@1/disk@4,0
+       5. c0t5d0 <ATA-HITACHI HUA7210S-A90A-931.51GB>
+          /pci@0,0/pci1022,7458@1/pci11ab,11ab@1/disk@5,0
+       6. c0t6d0 <ATA-HITACHI HUA7210S-A90A-931.51GB>
+          /pci@0,0/pci1022,7458@1/pci11ab,11ab@1/disk@6,0
+       7. c0t7d0 <ATA-HITACHI HUA7210S-A90A-931.51GB>
+          /pci@0,0/pci1022,7458@1/pci11ab,11ab@1/disk@7,0
+       8. c1t0d0 <ATA-HITACHI HUA7210S-A90A-931.51GB>
+          /pci@0,0/pci1022,7458@2/pci11ab,11ab@1/disk@0,0
+       9. c1t1d0 <ATA-HITACHI HUA7210S-A90A-931.51GB>
+          /pci@0,0/pci1022,7458@2/pci11ab,11ab@1/disk@1,0
+      10. c1t2d0 <ATA-HITACHI HUA7210S-A90A-931.51GB>
+          /pci@0,0/pci1022,7458@2/pci11ab,11ab@1/disk@2,0
+      11. c1t3d0 <ATA-HITACHI HUA7210S-A90A-931.51GB>
+          /pci@0,0/pci1022,7458@2/pci11ab,11ab@1/disk@3,0
+      12. c1t4d0 <ATA-HITACHI HUA7210S-A90A-931.51GB>
+          /pci@0,0/pci1022,7458@2/pci11ab,11ab@1/disk@4,0
+      13. c1t5d0 <ATA-HITACHI HUA7210S-A90A-931.51GB>
+          /pci@0,0/pci1022,7458@2/pci11ab,11ab@1/disk@5,0
+      14. c1t6d0 <ATA-HITACHI HUA7210S-A90A-931.51GB>
+          /pci@0,0/pci1022,7458@2/pci11ab,11ab@1/disk@6,0
+      15. c1t7d0 <ATA-HITACHI HUA7210S-A90A-931.51GB>
+          /pci@0,0/pci1022,7458@2/pci11ab,11ab@1/disk@7,0
+      16. c3t0d0 <ATA-HITACHI HUA7210S-A90A-931.51GB>
+          /pci@1,0/pci1022,7458@3/pci11ab,11ab@1/disk@0,0
+      17. c3t1d0 <ATA-HITACHI HUA7210S-A90A-931.51GB>
+          /pci@1,0/pci1022,7458@3/pci11ab,11ab@1/disk@1,0
+      18. c3t2d0 <ATA-HITACHI HUA7210S-A90A-931.51GB>
+          /pci@1,0/pci1022,7458@3/pci11ab,11ab@1/disk@2,0
+      19. c3t3d0 <ATA-HITACHI HUA7210S-A90A-931.51GB>
+          /pci@1,0/pci1022,7458@3/pci11ab,11ab@1/disk@3,0
+      20. c3t4d0 <ATA-HITACHI HUA7210S-A90A-931.51GB>
+          /pci@1,0/pci1022,7458@3/pci11ab,11ab@1/disk@4,0
+      21. c3t5d0 <ATA-HITACHI HUA7210S-A90A-931.51GB>
+          /pci@1,0/pci1022,7458@3/pci11ab,11ab@1/disk@5,0
+      22. c3t6d0 <ATA-HITACHI HUA7210S-A90A-931.51GB>
+          /pci@1,0/pci1022,7458@3/pci11ab,11ab@1/disk@6,0
+      23. c3t7d0 <ATA-HITACHI HUA7210S-A90A-931.51GB>
+          /pci@1,0/pci1022,7458@3/pci11ab,11ab@1/disk@7,0
+      24. c4t0d0 <DEFAULT cyl 60797 alt 2 hd 255 sec 126>
+          /pci@1,0/pci1022,7458@4/pci11ab,11ab@1/disk@0,0
+      25. c4t1d0 <ATA-HITACHI HUA7210S-A90A-931.51GB>
+          /pci@1,0/pci1022,7458@4/pci11ab,11ab@1/disk@1,0
+      26. c4t2d0 <ATA-HITACHI HUA7210S-A90A-931.51GB>
+          /pci@1,0/pci1022,7458@4/pci11ab,11ab@1/disk@2,0
+      27. c4t3d0 <ATA-HITACHI HUA7210S-A90A-931.51GB>
+          /pci@1,0/pci1022,7458@4/pci11ab,11ab@1/disk@3,0
+      28. c4t4d0 <DEFAULT cyl 60797 alt 2 hd 255 sec 126>
+          /pci@1,0/pci1022,7458@4/pci11ab,11ab@1/disk@4,0
+      29. c4t5d0 <ATA-HITACHI HUA7210S-A90A-931.51GB>
+          /pci@1,0/pci1022,7458@4/pci11ab,11ab@1/disk@5,0
+      30. c4t6d0 <ATA-HITACHI HUA7210S-A90A-931.51GB>
+          /pci@1,0/pci1022,7458@4/pci11ab,11ab@1/disk@6,0
+      31. c4t7d0 <ATA-HITACHI HUA7210S-A90A-931.51GB>
+          /pci@1,0/pci1022,7458@4/pci11ab,11ab@1/disk@7,0
+      32. c5t0d0 <ATA-HITACHI HUA7210S-A90A-931.51GB>
+          /pci@2,0/pci1022,7458@7/pci11ab,11ab@1/disk@0,0
+      33. c5t1d0 <ATA-HITACHI HUA7210S-A90A-931.51GB>
+          /pci@2,0/pci1022,7458@7/pci11ab,11ab@1/disk@1,0
+      34. c5t2d0 <ATA-HITACHI HUA7210S-A90A-931.51GB>
+          /pci@2,0/pci1022,7458@7/pci11ab,11ab@1/disk@2,0
+      35. c5t3d0 <ATA-HITACHI HUA7210S-A90A-931.51GB>
+          /pci@2,0/pci1022,7458@7/pci11ab,11ab@1/disk@3,0
+      36. c5t4d0 <ATA-HITACHI HUA7210S-A90A-931.51GB>
+          /pci@2,0/pci1022,7458@7/pci11ab,11ab@1/disk@4,0
+      37. c5t5d0 <ATA-HITACHI HUA7210S-A90A-931.51GB>
+          /pci@2,0/pci1022,7458@7/pci11ab,11ab@1/disk@5,0
+      38. c5t6d0 <ATA-HITACHI HUA7210S-A90A-931.51GB>
+          /pci@2,0/pci1022,7458@7/pci11ab,11ab@1/disk@6,0
+      39. c5t7d0 <ATA-HITACHI HUA7210S-A90A-931.51GB>
+          /pci@2,0/pci1022,7458@7/pci11ab,11ab@1/disk@7,0
+      40. c6t0d0 <ATA-HITACHI HUA7210S-A90A-931.51GB>
+          /pci@2,0/pci1022,7458@8/pci11ab,11ab@1/disk@0,0
+      41. c6t1d0 <ATA-HITACHI HUA7210S-A90A-931.51GB>
+          /pci@2,0/pci1022,7458@8/pci11ab,11ab@1/disk@1,0
+      42. c6t2d0 <ATA-HITACHI HUA7210S-A90A-931.51GB>
+          /pci@2,0/pci1022,7458@8/pci11ab,11ab@1/disk@2,0
+      43. c6t3d0 <ATA-HITACHI HUA7210S-A90A-931.51GB>
+          /pci@2,0/pci1022,7458@8/pci11ab,11ab@1/disk@3,0
+      44. c6t4d0 <ATA-HITACHI HUA7210S-A90A-931.51GB>
+          /pci@2,0/pci1022,7458@8/pci11ab,11ab@1/disk@4,0
+      45. c6t5d0 <ATA-HITACHI HUA7210S-A90A-931.51GB>
+          /pci@2,0/pci1022,7458@8/pci11ab,11ab@1/disk@5,0
+      46. c6t6d0 <ATA-HITACHI HUA7210S-A90A-931.51GB>
+          /pci@2,0/pci1022,7458@8/pci11ab,11ab@1/disk@6,0
+      47. c6t7d0 <ATA-HITACHI HUA7210S-A90A-931.51GB>
+          /pci@2,0/pci1022,7458@8/pci11ab,11ab@1/disk@7,0
+Specify disk (enter its number): 

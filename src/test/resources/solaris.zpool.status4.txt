@@ -1,0 +1,14 @@
+pool: tank
+ state: ONLINE
+status: One or more devices is currently being resilvered.  The pool will
+        continue to function, possibly in a degraded state.
+action: Wait for the resilver to complete.
+ scrub: resilver in progress for 0h2m, 16.43% done, 0h13m to go
+config:
+        NAME                  STATE     READ WRITE CKSUM 
+        tank                  DEGRADED     0     0     0
+          mirror              DEGRADED     0     0     0
+            replacing         DEGRADED     0     0     0
+              c1t0d0          ONLINE       0     0     0
+              c2t0d0          ONLINE       0     0     0  
+            c1t1d0            ONLINE       0     0     0

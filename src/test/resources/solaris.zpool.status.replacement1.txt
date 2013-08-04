@@ -1,0 +1,12 @@
+  pool: z-mirror
+ state: ONLINE
+ scrub: resilver completed with 0 errors on Tue Sep 11 09:05:44 2007
+config:
+
+        NAME                                         STATE     READ WRITE CKSUM
+        z-mirror                                     ONLINE       0     0     0
+          mirror                                     ONLINE       0     0     0
+            c4t60060160C166120064F22DA86C29DC11d0s6  ONLINE       0     0     0
+            c4t60060160C166120099E5419F6C29DC11d0s6  FAULTED      0     0     0
+
+errors: No known data errors
