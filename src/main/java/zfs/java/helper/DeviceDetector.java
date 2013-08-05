@@ -16,5 +16,5 @@ import zfs.java.models.Device;
  */
 public interface DeviceDetector extends ProcessParser {
 
-    public Map<String, Device> getDevices();
+    Map<String, Device> getDevices();
 }

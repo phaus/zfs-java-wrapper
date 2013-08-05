@@ -16,9 +16,9 @@ import org.junit.Test;
  */
 public class FreeBSDDeviceTest extends TestParent {
 
-    private final static String DEVICE_TRANSFER_ADA0 = "300.000";
-    private final static String BUS_TRANSFER_ADA1 = "at ahcich1 bus 0 scbus1 target 0 lun 0";
-    private final static String DESCRIPTION_TRANSFER_ADA2 = "<WDC WD20EARS-00MVWB0 51.0AB51> ATA-8 SATA 2.x device";
+    private static final String DEVICE_TRANSFER_ADA0 = "300.000";
+    private static final String BUS_TRANSFER_ADA1 = "at ahcich1 bus 0 scbus1 target 0 lun 0";
+    private static final String DESCRIPTION_TRANSFER_ADA2 = "<WDC WD20EARS-00MVWB0 51.0AB51> ATA-8 SATA 2.x device";
     private static Host HOST = new Host("root", "localhost");
 
     private Map<String, Device> getDeviceMapping() {

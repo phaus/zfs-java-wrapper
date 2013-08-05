@@ -28,9 +28,9 @@ public class ZFSElement {
             return value;
         }
     }
-    public final static String READ = "READ";
-    public final static String WRITE = "WRITE";
-    public final static String CKSUM = "CKSUM";
+    public static final String READ = "READ";
+    public static final String WRITE = "WRITE";
+    public static final String CKSUM = "CKSUM";
     // Public Modifier are correct here, see http://www.playframework.org/documentation/1.2.5/model .
     //CHECKSTYLE:OFF
     public State state;

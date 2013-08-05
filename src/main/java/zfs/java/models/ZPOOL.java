@@ -11,15 +11,15 @@ import java.util.List;
 
 public class ZPOOL extends ZFSElement {
 
-    public final static String NAME = "NAME";
-    public final static String SIZE = "SIZE";
-    public final static String ALLOC = "ALLOC";
-    public final static String FREE = "FREE";
-    public final static String EXPANDSZ = "EXPANDSZ";
-    public final static String CAP = "CAP";
-    public final static String DEDUP = "DEDUP";
-    public final static String HEALTH = "HEALTH";
-    public final static String ALTROOT = "ALTROOT";
+    public static final String NAME = "NAME";
+    public static final String SIZE = "SIZE";
+    public static final String ALLOC = "ALLOC";
+    public static final String FREE = "FREE";
+    public static final String EXPANDSZ = "EXPANDSZ";
+    public static final String CAP = "CAP";
+    public static final String DEDUP = "DEDUP";
+    public static final String HEALTH = "HEALTH";
+    public static final String ALTROOT = "ALTROOT";
     // Public Modifier are correct here, see http://www.playframework.org/documentation/1.2.5/model .
     //CHECKSTYLE:OFF    
     public String name;

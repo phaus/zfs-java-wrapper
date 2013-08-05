@@ -11,11 +11,11 @@ import java.util.List;
 
 public class ZFS {
 
-    public final static String NAME = "NAME";
-    public final static String USED = "USED";
-    public final static String AVAIL = "AVAIL";
-    public final static String REFER = "REFER";
-    public final static String MOUNTPOINT = "MOUNTPOINT";
+    public static final String NAME = "NAME";
+    public static final String USED = "USED";
+    public static final String AVAIL = "AVAIL";
+    public static final String REFER = "REFER";
+    public static final String MOUNTPOINT = "MOUNTPOINT";
     // Public Modifier are correct here, see http://www.playframework.org/documentation/1.2.5/model .
     //CHECKSTYLE:OFF    
     public String name;

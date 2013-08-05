@@ -23,18 +23,16 @@ import zfs.java.models.Partition;
 
 public class CommonDeviceDetector implements DeviceDetector {
 
-    protected Pair infoPair;
     protected String[] parts;
     protected Map<String, Device> devices;
+    protected Pair infoPair;
     protected Host host;
-    private final static String DEVICE_LISTING_START_MARKER = "AVAILABLE DISK SELECTIONS:";
-    private final static String DEVICE_LISTING_END_MARKER = "Specify disk (enter its number):";
     private boolean collectDevices = false;
     private boolean newDevice = false;
     private String currentDeviceName = null;
-    private final static String IDE_HDD = "ATA";
-    private final static Map<String, Long> SIZE_MAP = new HashMap<String, Long>();
-    private final static Logger LOG = Logger.getLogger(CommonDeviceDetector.class.getName());
+    private static final Map<String, Long> SIZE_MAP = new HashMap<String, Long>();
+    private static final Logger LOG = Logger.getLogger(CommonDeviceDetector.class.getName());
+
     static {
         SIZE_MAP.put("MB", 1024L);
         SIZE_MAP.put("GB", 1024 * 1024L);
@@ -47,18 +45,20 @@ public class CommonDeviceDetector implements DeviceDetector {
         this.host = host;
     }
 
+    @Override
     public Map<String, Device> getDevices() {
         return devices;
     }
 
+    @Override
     public void parse(BufferedReader reader) {
         String line;
         try {
             while ((line = reader.readLine()) != null) {
                 line = line.trim();
-                if (line.startsWith(DEVICE_LISTING_START_MARKER)) {
+                if (line.startsWith(CommonKeys.DEVICE_LISTING_START_MARKER)) {
                     collectDevices = true;
-                } else if (line.startsWith(DEVICE_LISTING_END_MARKER)) {
+                } else if (line.startsWith(CommonKeys.DEVICE_LISTING_END_MARKER)) {
                     return;
                 } else if (collectDevices && newDevice) {
                     handleBus(line);
@@ -97,7 +97,7 @@ public class CommonDeviceDetector implements DeviceDetector {
             Device device;
             currentDeviceName = line.substring(start + 1, end).trim();
             // we need to find a better conversion.
-            if (line.indexOf(IDE_HDD) > -1) {
+            if (line.indexOf(CommonKeys.IDE_HDD) > -1) {
                 device = new Device(currentDeviceName, Device.IDE_HDD);
             } else {
                 device = new Device(currentDeviceName, Device.SCSI_HDD);
@@ -149,11 +149,11 @@ public class CommonDeviceDetector implements DeviceDetector {
     }
 
     private static String getDescription(final String line) {
-        int start_idx, end_idx;
-        start_idx = line.indexOf('<');
-        end_idx = line.indexOf('>');
-        if (start_idx != -1 && end_idx != -1) {
-            return line.substring(start_idx + 1, end_idx).trim();
+        int startIndex, endIndex;
+        startIndex = line.indexOf('<');
+        endIndex = line.indexOf('>');
+        if (startIndex != -1 && endIndex != -1) {
+            return line.substring(startIndex + 1, endIndex).trim();
         }
         return "";
     }

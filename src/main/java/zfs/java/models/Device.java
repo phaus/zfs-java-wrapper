@@ -12,10 +12,10 @@ import java.util.List;
 public class Device implements Comparable<Device> {
 
     // TODO create enum for this
-    public final static int IDE_HDD = 0;
-    public final static int SCSI_HDD = 1;
-    public final static int IDE_CDROM = 2;
-    public final static int SCSI_CDROM = 3;
+    public static final int IDE_HDD = 0;
+    public static final int SCSI_HDD = 1;
+    public static final int IDE_CDROM = 2;
+    public static final int SCSI_CDROM = 3;
     // Public Modifier are correct here, see http://www.playframework.org/documentation/1.2.5/model .
     //CHECKSTYLE:OFF    
     public String bus;

@@ -20,8 +20,8 @@ import java.util.logging.Logger;
  */
 public class TestParent {
     
-    private final static Logger LOG = Logger.getLogger(TestParent.class.getName());
-    private final static String SEP = File.separator;
+    private static final Logger LOG = Logger.getLogger(TestParent.class.getName());
+    private static final String SEP = File.separator;
     protected void parseFile(String path, ProcessParser pp) {
         File file = new File("src"+SEP+"test"+SEP+path);
         if (file.exists()) {

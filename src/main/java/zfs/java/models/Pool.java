@@ -11,7 +11,7 @@ import java.util.List;
 
 public class Pool extends ZFSElement {
 
-    public final static String POOL = "pool";
+    public static final String POOL = "pool";
 
     public enum Type {
 

@@ -16,5 +16,5 @@ import zfs.java.models.ZPOOL;
  */
 public interface ZPOOLDetector extends ProcessParser {
 
-    public Map<String, ZPOOL> getPools();
+    Map<String, ZPOOL> getPools();
 }

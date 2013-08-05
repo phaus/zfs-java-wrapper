@@ -23,8 +23,8 @@ import zfs.java.models.ZPOOL;
 public class FreeBSDPoolTest extends TestParent {
 
     private static Host HOST = new Host("root", "localhost");
-    private final static String TANK = "tank";
-    private final static String TANK_2 = "tank2";
+    private static final String TANK = "tank";
+    private static final String TANK_2 = "tank2";
 
     private Map<String, Device> getDeviceMapping() {
         DeviceDetector fd = new FreeBSDDeviceDetector(HOST);

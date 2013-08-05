@@ -19,29 +19,8 @@ import zfs.java.models.Partition;
 
 public class FreeBSDDeviceDetector extends CommonDeviceDetector implements DeviceDetector {
 
-    /*
-     thx to http://www.cyberciti.biz/faq/freebsd-hard-disk-information
-     a] IDE Hard disk names starts with ad - /dev/ad0 first IDE hard disk, /dev/ad1 second hard disk and so on
-     b] SCSI Hard disk names starts with da - /dev/da*
-     c] IDE CDROM/RW/DVD names starts with acd - /dev/acd*
-     d] SCSI CDROM/RW/DVD names starts with cd - /dev/cd*
-     */
-    private final static String IDE_HDD = "ad";
-    private final static String SCSI_HDD = "da";
-    private final static String IDE_CDROM = "acd";
-    private final static String SCSI_CDROM = "cd";
-    private final static int DEVICE_TRANSFER = 0;
-    private final static int DEVICE_BUS = 1;
-    private final static int DEVICE_SIZE = 2;
-    private final static int DEVICE_DESCRIPTION = 3;
-    private final static String GPTID_HEADER = "Name  Status  Components";
-    private static final String DEVICE_BUS_MARKER = "at";
-    private static final String DEVICE_DESCRIPTION_MARKER = "<";
-    private static final String DEVICE_SIZE_MARKER = "byte sectors:";
-    private static final String DEVICE_TRANSFER_MARKER = "MB/s ";
-    private static final String DEVICE_SIZE_DEVIDER = "MB ";
-    private final static Logger LOG = Logger.getLogger(FreeBSDDeviceDetector.class.getName());
-    private boolean GPTID_MODE = false;
+    private static final Logger LOG = Logger.getLogger(FreeBSDDeviceDetector.class.getName());
+    private boolean gptidMode = false;
 
     public FreeBSDDeviceDetector(Host host) {
         super(host);
@@ -53,17 +32,17 @@ public class FreeBSDDeviceDetector extends CommonDeviceDetector implements Devic
         try {
             while ((line = reader.readLine()) != null) {
                 line = line.trim();
-                if (line.startsWith(IDE_HDD)) {
+                if (line.startsWith(FreeBSDKeys.IDE_HDD)) {
                     handleIDEHDD(line);
-                } else if (line.startsWith(SCSI_HDD)) {
+                } else if (line.startsWith(FreeBSDKeys.SCSI_HDD)) {
                     handleSCSIHDD(line);
                     //} else if (line.startsWith(IDE_CDROM)) {
                     // NOP
                     //} else if (line.startsWith(SCSI_CDROM)) {
                     // NOP
-                } else if (line.startsWith(GPTID_HEADER)) {
-                    GPTID_MODE = true;
-                } else if (GPTID_MODE) {
+                } else if (line.startsWith(FreeBSDKeys.GPTID_HEADER)) {
+                    gptidMode = true;
+                } else if (gptidMode) {
                     handleGptId(line);
                 }
             }
@@ -103,7 +82,7 @@ public class FreeBSDDeviceDetector extends CommonDeviceDetector implements Devic
     }
 
     private void createDevice(String deviceName, String line, int type) {
-        GPTID_MODE = false;
+        gptidMode = false;
         //Logger.debug("creating device " + deviceName);
         Device device = new Device(deviceName, type);
         device.host = host;
@@ -118,20 +97,20 @@ public class FreeBSDDeviceDetector extends CommonDeviceDetector implements Devic
         if (pair != null) {
             //Logger.debug("addInfo: " + pair.getKey() + " = " + pair.getValue() + "\n");
             switch (pair.getKey().intValue()) {
-                case DEVICE_TRANSFER:
+                case FreeBSDKeys.DEVICE_TRANSFER:
                     device.transfer = pair.getValue();
                     return device;
-                case DEVICE_DESCRIPTION:
+                case FreeBSDKeys.DEVICE_DESCRIPTION:
                     device.description = pair.getValue();
                     return device;
-                case DEVICE_SIZE:
+                case FreeBSDKeys.DEVICE_SIZE:
                     long size = 0L;
                     if (pair.getValue() != null) {
                         size = Long.parseLong(pair.getValue());
                     }
                     device.size = size;
                     return device;
-                case DEVICE_BUS:
+                case FreeBSDKeys.DEVICE_BUS:
                     device.bus = pair.getValue();
                     return device;
                 default:
@@ -144,19 +123,19 @@ public class FreeBSDDeviceDetector extends CommonDeviceDetector implements Devic
     private Pair<Integer, String> getInfo(String deviceName, String line) {
         String data = line.replace(deviceName + ":", "");
         data = data.replace(deviceName, "").trim();
-        if (data.indexOf(DEVICE_TRANSFER_MARKER) != -1) {
-            parts = data.split(DEVICE_TRANSFER_MARKER);
-            return new Pair(DEVICE_TRANSFER, parts[0]);
+        if (data.indexOf(FreeBSDKeys.DEVICE_TRANSFER_MARKER) != -1) {
+            parts = data.split(FreeBSDKeys.DEVICE_TRANSFER_MARKER);
+            return new Pair(FreeBSDKeys.DEVICE_TRANSFER, parts[0]);
         }
-        if (data.indexOf(DEVICE_SIZE_MARKER) != -1) {
-            parts = data.split(DEVICE_SIZE_DEVIDER);
-            return new Pair(DEVICE_SIZE, parts[0]);
+        if (data.indexOf(FreeBSDKeys.DEVICE_SIZE_MARKER) != -1) {
+            parts = data.split(FreeBSDKeys.DEVICE_SIZE_DEVIDER);
+            return new Pair(FreeBSDKeys.DEVICE_SIZE, parts[0]);
         }
-        if (data.contains(DEVICE_DESCRIPTION_MARKER)) {
-            return new Pair(DEVICE_DESCRIPTION, data);
+        if (data.contains(FreeBSDKeys.DEVICE_DESCRIPTION_MARKER)) {
+            return new Pair(FreeBSDKeys.DEVICE_DESCRIPTION, data);
         }
-        if (data.startsWith(DEVICE_BUS_MARKER)) {
-            return new Pair(DEVICE_BUS, data);
+        if (data.startsWith(FreeBSDKeys.DEVICE_BUS_MARKER)) {
+            return new Pair(FreeBSDKeys.DEVICE_BUS, data);
         }
         return null;
     }
