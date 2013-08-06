@@ -1,0 +1,7 @@
+NAME                                                                              USED  AVAIL  REFER  MOUNTPOINT
+zones/9eac5c0c-a941-11e2-a7dc-57a6b041988f@20130419223617                            0      -   365M  -
+zones/9eac5c0c-a941-11e2-a7dc-57a6b041988f@c9bda9cd-1c94-4473-9a0f-d6bc4bcb18c4      0      -   365M  -
+zones/9eac5c0c-a941-11e2-a7dc-57a6b041988f@9851fd6c-5b4e-4a15-885b-a74a0f65eafd      0      -   365M  -
+zones/9eac5c0c-a941-11e2-a7dc-57a6b041988f@5b790cb9-3371-479c-829b-b25d542033d8      0      -   365M  -
+zones/beb2dbd4-b26f-11e2-8ad4-935c80092aa6@final                                  199K      -  1,20G  -
+zones/e6f10814-a38d-11e2-8138-67b96e228c1e@final                                  235K      -  2,01G  -
