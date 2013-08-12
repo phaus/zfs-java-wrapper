@@ -23,6 +23,14 @@ import zfs.java.models.Partition;
 
 public class CommonDeviceDetector implements DeviceDetector {
 
+    private static final long MB_SIZE = 1024L;
+    private static final long GB_SIZE = 1024 * 1024L;
+    private static final long TB_SIZE = 1024 * 1024 * 1024L;
+    private static final long PB_SIZE = 1024 * 1024 * 1024 * 1024L;
+    private static final int CYL_SIZE_OFFSET = 4;
+    private static final int ALT_SIZE_OFFSET = 4;
+    private static final int HD_SIZE_OFFSET = 3;
+    private static final int SEC_SIZE_OFFSET = 4;
     protected String[] parts;
     protected Map<String, Device> devices;
     protected Pair infoPair;
@@ -34,10 +42,10 @@ public class CommonDeviceDetector implements DeviceDetector {
     private static final Logger LOG = Logger.getLogger(CommonDeviceDetector.class.getName());
 
     static {
-        SIZE_MAP.put("MB", 1024L);
-        SIZE_MAP.put("GB", 1024 * 1024L);
-        SIZE_MAP.put("TB", 1024 * 1024 * 1024L);
-        SIZE_MAP.put("PB", 1024 * 1024 * 1024 * 1024L);
+        SIZE_MAP.put("MB", MB_SIZE);
+        SIZE_MAP.put("GB", GB_SIZE);
+        SIZE_MAP.put("TB", TB_SIZE);
+        SIZE_MAP.put("PB", PB_SIZE);
     }
 
     public CommonDeviceDetector(Host host) {
@@ -123,10 +131,10 @@ public class CommonDeviceDetector implements DeviceDetector {
                 //c6t0d0 <VBOX-HARDDISK-1.0 cyl 4094 alt 2 hd 128 sec 32>
                 Long p1, p2, p3, p4;
                 endIdx = line.indexOf('>');
-                p1 = Long.parseLong(line.substring(cylIdx + 4, altIdx).trim());
-                p2 = Long.parseLong(line.substring(altIdx + 4, hdIdx).trim());
-                p3 = Long.parseLong(line.substring(hdIdx + 3, secIdx).trim());
-                p4 = Long.parseLong(line.substring(secIdx + 4, endIdx).trim());
+                p1 = Long.parseLong(line.substring(cylIdx + CYL_SIZE_OFFSET, altIdx).trim());
+                p2 = Long.parseLong(line.substring(altIdx + ALT_SIZE_OFFSET, hdIdx).trim());
+                p3 = Long.parseLong(line.substring(hdIdx + HD_SIZE_OFFSET, secIdx).trim());
+                p4 = Long.parseLong(line.substring(secIdx + SEC_SIZE_OFFSET, endIdx).trim());
                 size = (p1 + p2) * p3 * p4 / 2;
             } else {
                 //c5t7d0 <VBOX-HARDDISK-1.0-1.00GB>

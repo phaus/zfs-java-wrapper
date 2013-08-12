@@ -7,6 +7,7 @@
 package zfs.java.models;
 
 public class Pair<TYPEA, TYPEB> implements Comparable< Pair<TYPEA, TYPEB>> {
+    private static final int HASH_CODE_COUNT = 31;
 
     private final TYPEA key;
     private final TYPEB value;
@@ -50,7 +51,7 @@ public class Pair<TYPEA, TYPEB> implements Comparable< Pair<TYPEA, TYPEB>> {
 
     @Override
     public int hashCode() {
-        int hashCode = key.hashCode() + (31 * value.hashCode());
+        int hashCode = key.hashCode() + (HASH_CODE_COUNT * value.hashCode());
         return (hashCode);
     }
 

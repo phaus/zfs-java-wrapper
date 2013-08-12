@@ -20,6 +20,7 @@ import zfs.java.models.Partition;
 public class FreeBSDDeviceDetector extends CommonDeviceDetector implements DeviceDetector {
 
     private static final Logger LOG = Logger.getLogger(FreeBSDDeviceDetector.class.getName());
+    private static final int GPT_ARRAY_SIZE = 3;
     private boolean gptidMode = false;
 
     public FreeBSDDeviceDetector(Host host) {
@@ -150,7 +151,7 @@ public class FreeBSDDeviceDetector extends CommonDeviceDetector implements Devic
     private void handleGptId(String line) {
         Device device;
         parts = cleanSplit(line, " ");
-        if (parts.length == 3) {
+        if (parts.length == GPT_ARRAY_SIZE) {
             for (String key : devices.keySet()) {
                 if (parts[2].startsWith(key)) {
                     device = devices.get(key);

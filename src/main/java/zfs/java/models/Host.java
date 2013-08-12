@@ -14,6 +14,7 @@ import java.util.TreeSet;
 
 public class Host {
 
+    public static final int DEFAULT_SSH_PORT = 22;
     // Public Modifier are correct here, see http://www.playframework.org/documentation/1.2.5/model .
     //CHECKSTYLE:OFF
     public String url;
@@ -33,7 +34,7 @@ public class Host {
     }
 
     public Host(final String user, final String url) {
-        this(user, url, 22);
+        this(user, url, DEFAULT_SSH_PORT);
     }
 
     public void setDevices(Collection<Device> devices) {

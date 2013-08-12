@@ -28,6 +28,11 @@ import zfs.java.models.ZFSElement;
 import zfs.java.models.ZPOOL;
 
 public class CommonZPOOLDetector implements ZPOOLDetector {
+    private static final int INFO_STATE = 1;
+    private static final int INFO_READ = 2;
+    private static final int INFO_WRITE = 3;
+    private static final int INFO_CHKSUM = 4;
+    private static final int INFO_NONE = 0;
 
     protected enum InfoType {
 
@@ -233,22 +238,22 @@ public class CommonZPOOLDetector implements ZPOOLDetector {
 
     private void handleInfoElement(ZFSElement element, final String part, final int c) {
         switch (c) {
-            case 0:
+            case INFO_NONE:
                 break;
-            case 1:
+            case INFO_STATE:
                 for (ZFSElement.State state : ZFSElement.State.values()) {
                     if (state.toString().equals(part)) {
                         element.state = state;
                     }
                 }
                 break;
-            case 2:
+            case INFO_READ:
                 element.read = Integer.parseInt(part);
                 break;
-            case 3:
+            case INFO_WRITE:
                 element.write = Integer.parseInt(part);
                 break;
-            case 4:
+            case INFO_CHKSUM:
                 element.cksum = Integer.parseInt(part);
                 break;
             default:
