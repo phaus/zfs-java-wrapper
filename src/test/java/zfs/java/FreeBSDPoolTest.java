@@ -25,6 +25,7 @@ public class FreeBSDPoolTest extends TestParent {
     private static Host HOST = new Host("root", "localhost");
     private static final String TANK = "tank";
     private static final String TANK_2 = "tank2";
+    private static final String TANK_3 = "backup";
 
     private Map<String, Device> getDeviceMapping() {
         DeviceDetector fd = new FreeBSDDeviceDetector(HOST);
@@ -77,5 +78,30 @@ public class FreeBSDPoolTest extends TestParent {
         assertTrue(subPool != null);
         assertTrue(subPool.type.equals(Pool.Type.RAIDZ1));
         assertTrue(subPool.devices.size() == 3);
+    }
+
+    @Test
+    public void testZPoolStatus3() {
+        HOST.setDevices(getDectectedDevices());
+        ZPOOLDetector fd = new CommonZPOOLDetector(HOST);
+        String file = "resources/freenas.zpool.status3.txt";
+        parseFile(file, fd);
+        //debug(fd.getPools(), "zPools");
+        ZPOOL zPool = (ZPOOL) get(0, fd.getPools());
+        checkPool(zPool, TANK, Pool.Type.RAIDZ1, 1, 3);
+        zPool = (ZPOOL) get(1, fd.getPools());
+        checkPool(zPool, TANK_3, Pool.Type.STRIPED, 1, 1);
+    }
+
+    private void checkPool(ZPOOL zPool, String poolName, Pool.Type poolType, int poolSize, int devicesSize) {
+        debug(zPool, poolName+": zPool");
+        assertTrue(zPool != null);
+        assertTrue(poolName+": Pool Name should be " + poolName + ", but was " + zPool.name, poolName.equals(zPool.name));
+        assertTrue(poolName+": Pool size should be " + poolSize + ", but was " + zPool.pools.size(), zPool.pools.size() == poolSize);
+        Pool subPool = (Pool) first(zPool.pools);
+        debug(zPool.pools, poolName+": zPool.pools");
+        assertTrue(subPool != null);
+        assertTrue(subPool.type.equals(poolType));
+        assertTrue(poolName+": subPool size should be " + devicesSize + ", but was " + subPool.devices.size(), subPool.devices.size() == devicesSize);
     }
 }

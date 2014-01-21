@@ -19,11 +19,12 @@ import java.util.logging.Logger;
  *
  */
 public class TestParent {
-    
+
     private static final Logger LOG = Logger.getLogger(TestParent.class.getName());
     private static final String SEP = File.separator;
+
     protected void parseFile(String path, ProcessParser pp) {
-        File file = new File("src"+SEP+"test"+SEP+path);
+        File file = new File("src" + SEP + "test" + SEP + path);
         if (file.exists()) {
             LOG.log(Level.INFO, "\n\nReading: {0}\n\n", path);
             try {
@@ -39,31 +40,35 @@ public class TestParent {
             LOG.log(Level.SEVERE, "file: {0} does not exists!", file.getAbsolutePath());
         }
     }
-    
-    protected Object first(final Object collection) {
+
+    protected Object get(int index, final Object collection) {
         if (collection != null) {
             if (collection instanceof List) {
                 List list = (List) collection;
-                if (list.size() > 0) {
-                    return list.get(0);
+                if (list.size() > index) {
+                    return list.get(index);
                 }
             }
             if (collection instanceof Set) {
                 Set set = (Set) collection;
-                if (set.size() > 0) {
-                    return set.toArray()[0];
+                if (set.size() > index) {
+                    return set.toArray()[index];
                 }
             }
             if (collection instanceof Map) {
                 Map map = (Map) collection;
-                if (map.size() > 0) {
-                    return map.get(map.keySet().toArray()[0]);
+                if (map.size() > index) {
+                    return map.get(map.keySet().toArray()[index]);
                 }
             }
         }
         return null;
     }
-    
+
+    protected Object first(final Object collection) {
+        return get(0, collection);
+    }
+
     protected Object entry(final Object collection, final int index) {
         if (collection != null) {
             if (collection instanceof List) {
@@ -77,19 +82,19 @@ public class TestParent {
                 if (set.size() >= index) {
                     return set.toArray()[index];
                 }
-                
+
             }
             if (collection instanceof Map) {
                 Map map = (Map) collection;
                 if (map.size() >= index) {
                     return map.get(map.keySet().toArray()[index]);
                 }
-                
+
             }
         }
         return null;
     }
-    
+
     protected Object last(final Object collection) {
         if (collection != null) {
             if (collection instanceof List) {
@@ -113,11 +118,11 @@ public class TestParent {
         }
         return null;
     }
-    
+
     protected void debug(Object obj) {
         debug(obj, (Object) null);
     }
-    
+
     protected void debug(Object obj, Object... args) {
         StringBuilder sb = new StringBuilder("\n");
         if (args != null && args.length > 0) {
@@ -126,7 +131,7 @@ public class TestParent {
         sb = debugEntry(sb, obj);
         LOG.log(Level.INFO, sb.toString());
     }
-    
+
     protected StringBuilder debugEntry(StringBuilder sb, Object obj) {
         if (obj == null) {
             sb.append("\tis NULL \n");
@@ -154,7 +159,7 @@ public class TestParent {
         }
         return sb;
     }
-    
+
     private String prefixLine(final String prefix, final String output) {
         StringBuilder sb = new StringBuilder();
         for (String line : output.split("\n")) {

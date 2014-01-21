@@ -1,0 +1,31 @@
+  pool: backup
+ state: ONLINE
+  scan: none requested
+config:
+
+	NAME                                          STATE     READ WRITE CKSUM
+	backup                                        ONLINE       0     0     0
+	  gptid/7e65408f-82cd-11e3-87f0-3c4a92744a81  ONLINE       0     0     0
+
+errors: No known data errors
+
+  pool: tank
+ state: ONLINE
+status: One or more devices are configured to use a non-native block size.
+	Expect reduced performance.
+action: Replace affected devices with devices that support the
+	configured block size, or migrate data to a properly configured
+	pool.
+  scan: scrub in progress since Tue Jan 21 19:24:53 2014
+        84.9G scanned out of 4.32T at 42.2M/s, 29h14m to go
+        0 repaired, 1.92% done
+config:
+
+	NAME                                            STATE     READ WRITE CKSUM
+	tank                                            ONLINE       0     0     0
+	  raidz1-0                                      ONLINE       0     0     0
+	    gptid/338e9703-4a84-11e1-b3ba-3c4a92744a81  ONLINE       0     0     0  block size: 512B configured, 4096B native
+	    gptid/34b0b4a8-4a84-11e1-b3ba-3c4a92744a81  ONLINE       0     0     0  block size: 512B configured, 4096B native
+	    gptid/35c4a19f-4a84-11e1-b3ba-3c4a92744a81  ONLINE       0     0     0  block size: 512B configured, 4096B native
+
+errors: No known data errors

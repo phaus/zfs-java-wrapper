@@ -2,6 +2,7 @@
 gptid/338e9703-4a84-11e1-b3ba-3c4a92744a81     N/A  ada0p2
 gptid/34b0b4a8-4a84-11e1-b3ba-3c4a92744a81     N/A  ada1p2
 gptid/35c4a19f-4a84-11e1-b3ba-3c4a92744a81     N/A  ada2p2
+gptid/7e65408f-82cd-11e3-87f0-3c4a92744a81     N/A  ada3p2
                              ufs/FreeNASs3     N/A  da0s3
                              ufs/FreeNASs4     N/A  da0s4
                             ufs/FreeNASs1a     N/A  da0s1a
