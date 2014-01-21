@@ -34,10 +34,10 @@ public class FreeBSDDeviceTest extends TestParent {
     @Test
     public void testDeviceListing() {
         Map<String, Device> devices = getDeviceMapping();
-        assertTrue(devices.size() == 4);
-        assertTrue(DEVICE_TRANSFER_ADA0.equals(devices.get("ada0").transfer));
-        assertTrue(BUS_TRANSFER_ADA1.equals(devices.get("ada1").bus));
-        assertTrue(DESCRIPTION_TRANSFER_ADA2.equals(devices.get("ada2").description));
+        assertTrue(devices.size() == 5);
+        assertTrue("should be "+DEVICE_TRANSFER_ADA0+", but was "+devices.get("ada0").transfer, DEVICE_TRANSFER_ADA0.equals(devices.get("ada0").transfer));
+        assertTrue("should be "+BUS_TRANSFER_ADA1+", but was "+devices.get("ada1").bus, BUS_TRANSFER_ADA1.equals(devices.get("ada1").bus));
+        assertTrue("should be "+DESCRIPTION_TRANSFER_ADA2+", but was "+devices.get("ada2").description, DESCRIPTION_TRANSFER_ADA2.equals(devices.get("ada2").description));
         debug(devices);
     }
 }

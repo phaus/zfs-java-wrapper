@@ -132,7 +132,7 @@ public class FreeBSDDeviceDetector extends CommonDeviceDetector implements Devic
             parts = data.split(FreeBSDKeys.DEVICE_SIZE_DEVIDER);
             return new Pair(FreeBSDKeys.DEVICE_SIZE, parts[0]);
         }
-        if (data.contains(FreeBSDKeys.DEVICE_DESCRIPTION_MARKER)) {
+        if (data.startsWith(FreeBSDKeys.DEVICE_DESCRIPTION_MARKER)) {
             return new Pair(FreeBSDKeys.DEVICE_DESCRIPTION, data);
         }
         if (data.startsWith(FreeBSDKeys.DEVICE_BUS_MARKER)) {
