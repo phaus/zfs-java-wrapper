@@ -18,7 +18,7 @@ public class ZFSElement {
         REMOVED("REMOVED"),
         UNAVAIL("UNAVAIL"),
         INUSE("INUSE");
-        private String value;
+        private final String value;
         State(String value) {
             this.value = value;
         }
