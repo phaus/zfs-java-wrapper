@@ -34,7 +34,6 @@ public class Pool extends ZFSElement {
     // Public Modifier are correct here, see http://www.playframework.org/documentation/1.2.5/model .
     //CHECKSTYLE:OFF    
     public Type type;
-    public ZPOOL zpool;
     public List<ZFSDevice> devices;
     public List<ZFSDevice> spares;
     public List<ZFSDevice> logs;

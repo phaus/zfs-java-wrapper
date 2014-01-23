@@ -37,6 +37,12 @@
                 <version>2.3</version>
         </dependency>-->
         <dependency>
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>jackson-jaxrs</artifactId>
+            <version>1.9.13</version>
+        </dependency>
+            
+        <dependency>
             <groupId>net.sf.oval</groupId>
             <artifactId>oval</artifactId>
             <version>1.82</version>

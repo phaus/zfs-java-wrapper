@@ -11,6 +11,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
+import org.codehaus.jackson.annotate.JsonIgnore;
 
 public class Host {
 
@@ -22,6 +23,7 @@ public class Host {
     public int port;
     // TODO Maybe we should use a Map<String,Device> here.
     public Set<Device> devices;
+    @JsonIgnore
     public List<ZPOOL> pools;
     //CHECKSTYLE:ON
 

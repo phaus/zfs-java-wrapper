@@ -11,6 +11,8 @@ import java.util.Map;
 import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import org.codehaus.jackson.map.ObjectMapper;
+import zfs.java.models.ZPOOL;
 
 /**
  * TestParent 20.10.2012
@@ -117,6 +119,15 @@ public class TestParent {
             }
         }
         return null;
+    }
+
+    protected void debugJson(Object obj, String name) {
+        try {
+            ObjectMapper mapper = new ObjectMapper();
+            LOG.log(Level.INFO, name + ": => JSON:\n\n {0}\n\n", mapper.writeValueAsString(obj));
+        } catch (IOException ex) {
+            LOG.log(Level.SEVERE, null, ex);
+        }
     }
 
     protected void debug(Object obj) {

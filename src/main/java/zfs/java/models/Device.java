@@ -8,6 +8,7 @@ package zfs.java.models;
 
 import java.util.ArrayList;
 import java.util.List;
+import org.codehaus.jackson.annotate.JsonIgnore;
 
 public class Device implements Comparable<Device> {
 
@@ -24,6 +25,7 @@ public class Device implements Comparable<Device> {
     public String transfer;
     public int type;
     public long size;
+    @JsonIgnore
     public Host host;
     public List<Partition> partitions;
     //CHECKSTYLE:ON

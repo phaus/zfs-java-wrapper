@@ -6,12 +6,15 @@
  */
 package zfs.java.models;
 
+import org.codehaus.jackson.annotate.JsonIgnore;
+
 public class ZFSDevice extends ZFSElement {
 
     // Public Modifier are correct here, see http://www.playframework.org/documentation/1.2.5/model .
     //CHECKSTYLE:OFF
     public String name;
     public Partition partition;
+    @JsonIgnore
     public Pool pool;
     //CHECKSTYLE:ON
 

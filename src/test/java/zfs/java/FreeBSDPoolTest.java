@@ -3,6 +3,7 @@ package zfs.java;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
+import java.util.logging.Logger;
 import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 import zfs.java.helper.DeviceDetector;
@@ -22,6 +23,7 @@ import zfs.java.models.ZPOOL;
  */
 public class FreeBSDPoolTest extends TestParent {
 
+    private static final Logger LOG = Logger.getLogger(FreeBSDPoolTest.class.getName());
     private static Host HOST = new Host("root", "localhost");
     private static final String TANK = "tank";
     private static final String TANK_2 = "tank2";
@@ -93,15 +95,35 @@ public class FreeBSDPoolTest extends TestParent {
         checkPool(zPool, TANK_3, Pool.Type.STRIPED, 1, 1);
     }
 
-    private void checkPool(ZPOOL zPool, String poolName, Pool.Type poolType, int poolSize, int devicesSize) {
-        debug(zPool, poolName+": zPool");
+    @Test
+    public void testZPoolStatus4() {
+        HOST.setDevices(getDectectedDevices());
+        ZPOOLDetector fd = new CommonZPOOLDetector(HOST);
+        String file = "resources/freenas.zpool.status4.txt";
+        parseFile(file, fd);
+        ZPOOL zPool = (ZPOOL) first(fd.getPools());
+        debug(zPool, "zPool");
         assertTrue(zPool != null);
-        assertTrue(poolName+": Pool Name should be " + poolName + ", but was " + zPool.name, poolName.equals(zPool.name));
-        assertTrue(poolName+": Pool size should be " + poolSize + ", but was " + zPool.pools.size(), zPool.pools.size() == poolSize);
+        assertTrue(TANK.equals(zPool.name));
+        assertTrue(zPool.pools.size() == 1);
         Pool subPool = (Pool) first(zPool.pools);
-        debug(zPool.pools, poolName+": zPool.pools");
+        debug(zPool.pools, "freenas.zpool.status4.txt: zPool.pools");
+        assertTrue(subPool != null);
+        assertTrue(subPool.type.equals(Pool.Type.RAIDZ1));
+        assertTrue("should be 3, but were " + subPool.devices.size(), subPool.devices.size() == 3);
+    }
+
+    private void checkPool(ZPOOL zPool, String poolName, Pool.Type poolType, int poolSize, int devicesSize) {
+        debug(zPool, poolName + ": zPool");
+        assertTrue(zPool != null);
+        assertTrue(poolName + ": Pool Name should be " + poolName + ", but was " + zPool.name, poolName.equals(zPool.name));
+        assertTrue(poolName + ": Pool size should be " + poolSize + ", but was " + zPool.pools.size(), zPool.pools.size() == poolSize);
+        debugJson(zPool, zPool.name);
+        Pool subPool = (Pool) first(zPool.pools);
+        debug(zPool.pools, poolName + ": zPool.pools");
+
         assertTrue(subPool != null);
         assertTrue(subPool.type.equals(poolType));
-        assertTrue(poolName+": subPool size should be " + devicesSize + ", but was " + subPool.devices.size(), subPool.devices.size() == devicesSize);
+        assertTrue(poolName + ": subPool size should be " + devicesSize + ", but was " + subPool.devices.size(), subPool.devices.size() == devicesSize);
     }
 }

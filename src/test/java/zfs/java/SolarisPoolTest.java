@@ -76,6 +76,7 @@ public class SolarisPoolTest extends TestParent {
         String file = "resources/solaris.zpool.status.thumper2.txt";
         parseFile(file, fd);
         debug(fd.getPools());
+        debugJson(fd.getPools(), "solaris.zpool.status.thumper2");
     }
 
     @Test
@@ -86,6 +87,7 @@ public class SolarisPoolTest extends TestParent {
         String file = "resources/solaris.zpool.status.thumper3.txt";
         parseFile(file, fd);
         debug(fd.getPools());
+        debugJson(fd.getPools(), "olaris.zpool.status.thumper3");        
     }
 
     @Test
@@ -117,7 +119,7 @@ public class SolarisPoolTest extends TestParent {
         parseFile(file, fd);
         debug(fd.getPools());
     }
-    
+
     @Test
     public void testSolarisZPoolDegraded2() {
         dectectDevices("resources/solaris.format4.txt");
@@ -126,7 +128,7 @@ public class SolarisPoolTest extends TestParent {
         String file = "resources/solaris.zpool.status.degraded2.txt";
         parseFile(file, fd);
         debug(fd.getPools());
-    }    
+    }
 
     @Test
     public void testSolarisZPoolReplacment1() {
@@ -136,8 +138,8 @@ public class SolarisPoolTest extends TestParent {
         String file = "resources/solaris.zpool.status.replacement1.txt";
         parseFile(file, fd);
         debug(fd.getPools());
-    }   
-    
+    }
+
     @Test
     public void testSolarisZPoolReplacment2() {
         dectectDevices("resources/solaris.format5.txt");
@@ -146,5 +148,6 @@ public class SolarisPoolTest extends TestParent {
         String file = "resources/solaris.zpool.status.replacement2.txt";
         parseFile(file, fd);
         debug(fd.getPools());
-    }       
+        debugJson(fd.getPools(), "solaris.zpool.status.replacement2");
+    }
 }

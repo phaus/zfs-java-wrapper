@@ -10,7 +10,6 @@ public class Partition {
 
     // Public Modifier are correct here, see http://www.playframework.org/documentation/1.2.5/model .
     //CHECKSTYLE:OFF
-    public Device device;
     public String name;
     public String gptId;
     //CHECKSTYLE:ON
