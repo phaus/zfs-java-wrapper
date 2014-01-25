@@ -113,6 +113,29 @@ public class FreeBSDPoolTest extends TestParent {
         assertTrue("should be 3, but were " + subPool.devices.size(), subPool.devices.size() == 3);
     }
 
+/*
+FIXME: This Status fails:
+      raidz1-0                                        ONLINE       0     0     0
+        spare-0                                       ONLINE       0     0     0
+*/
+//    @Test
+    public void testZPoolStatus5() {
+        HOST.setDevices(getDectectedDevices());
+        ZPOOLDetector fd = new CommonZPOOLDetector(HOST);
+        String file = "resources/freenas.zpool.status5.txt";
+        parseFile(file, fd);
+        ZPOOL zPool = (ZPOOL) first(fd.getPools());
+        debug(zPool, "zPool");
+        assertTrue(zPool != null);
+        assertTrue(TANK.equals(zPool.name));
+        assertTrue(zPool.pools.size() == 1);
+        Pool subPool = (Pool) first(zPool.pools);
+        debug(zPool.pools, "freenas.zpool.status5.txt: zPool.pools");
+        assertTrue(subPool != null);
+        assertTrue(subPool.type.equals(Pool.Type.RAIDZ1));
+        assertTrue("should be 3, but were " + subPool.devices.size(), subPool.devices.size() == 3);
+    }
+
     private void checkPool(ZPOOL zPool, String poolName, Pool.Type poolType, int poolSize, int devicesSize) {
         debug(zPool, poolName + ": zPool");
         assertTrue(zPool != null);

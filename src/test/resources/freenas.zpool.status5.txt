@@ -1,0 +1,22 @@
+  pool: tank
+ state: ONLINE
+status: One or more devices is currently being resilvered.  The pool will
+	continue to function, possibly in a degraded state.
+action: Wait for the resilver to complete.
+  scan: resilver in progress since Sat Jan 25 20:05:11 2014
+        386M scanned out of 4.35T at 48.2M/s, 26h16m to go
+        125M resilvered, 0.01% done
+config:
+
+	NAME                                              STATE     READ WRITE CKSUM
+	tank                                              ONLINE       0     0     0
+	  raidz1-0                                        ONLINE       0     0     0
+	    spare-0                                       ONLINE       0     0     0
+	      gptid/03ad3b68-838f-11e3-87f0-3c4a92744a81  ONLINE       0     0     0
+	      gptid/c60eb3ad-842e-11e3-87f0-3c4a92744a81  ONLINE       0     0     0  (resilvering)
+	    gptid/0464edaf-838f-11e3-87f0-3c4a92744a81    ONLINE       0     0     0
+	    gptid/0505744f-838f-11e3-87f0-3c4a92744a81    ONLINE       0     0     0
+	spares
+	  26629375266236322                               INUSE     was /dev/gptid/c60eb3ad-842e-11e3-87f0-3c4a92744a81
+
+errors: No known data errors
