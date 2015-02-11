@@ -21,7 +21,7 @@ public class FreeBSDDeviceTest extends TestParent {
     private static final String DESCRIPTION_TRANSFER_ADA2 = "<WDC WD20EARS-00MVWB0 51.0AB51> ATA-8 SATA 2.x device";
     private static Host HOST = new Host("root", "localhost");
 
-    private Map<String, Device> getDeviceMapping() {
+    private Map<String, Device> getDeviceMapping1() {
         DeviceDetector fd = new FreeBSDDeviceDetector(HOST);
         String file;
         file = "resources/freenas.dmesg.txt";
@@ -30,10 +30,10 @@ public class FreeBSDDeviceTest extends TestParent {
         parseFile(file, fd);
         return fd.getDevices();
     }
-
+    
     @Test
     public void testDeviceListing() {
-        Map<String, Device> devices = getDeviceMapping();
+        Map<String, Device> devices = getDeviceMapping1();
         assertTrue(devices.size() == 5);
         assertTrue("should be "+DEVICE_TRANSFER_ADA0+", but was "+devices.get("ada0").transfer, DEVICE_TRANSFER_ADA0.equals(devices.get("ada0").transfer));
         assertTrue("should be "+BUS_TRANSFER_ADA1+", but was "+devices.get("ada1").bus, BUS_TRANSFER_ADA1.equals(devices.get("ada1").bus));
