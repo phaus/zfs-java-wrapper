@@ -95,10 +95,10 @@ public class FreeBSDPoolTest extends TestParent {
         ZPOOLDetector fd = new CommonZPOOLDetector(HOST);
         String file = "resources/freenas.zpool.status3.txt";
         parseFile(file, fd);
-        ZPOOL zPool = (ZPOOL) get(0, fd.getPools());
-        checkPool(zPool, TANK_3, Pool.Type.STRIPED, 1, 1);
-        zPool = (ZPOOL) get(1, fd.getPools());
+        ZPOOL zPool = (ZPOOL) get(TANK, fd.getPools());
         checkPool(zPool, TANK, Pool.Type.RAIDZ1, 1, 3);
+        zPool = (ZPOOL) get(TANK_3, fd.getPools());
+        checkPool(zPool, TANK_3, Pool.Type.STRIPED, 1, 1);
     }
 
     @Test
@@ -122,6 +122,7 @@ public class FreeBSDPoolTest extends TestParent {
      * FIXME: This Test also fails:
      */
 //    @Test
+
     public void testZPoolStatusWithCache() {
         HOST.setDevices(getDectectedDevices("resources/freenas.dmesg2.txt", "resources/freenas.glabel.status2.txt"));
         ZPOOLDetector fd = new CommonZPOOLDetector(HOST);
