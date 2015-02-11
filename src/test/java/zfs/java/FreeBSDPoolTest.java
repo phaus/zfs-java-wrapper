@@ -29,18 +29,18 @@ public class FreeBSDPoolTest extends TestParent {
     private static final String TANK_2 = "tank2";
     private static final String TANK_3 = "backup";
 
-    private Map<String, Device> getDeviceMapping() {
+    private Map<String, Device> getDeviceMapping(String glabelFile) {
         DeviceDetector fd = new FreeBSDDeviceDetector(HOST);
         String file;
         file = "resources/freenas.dmesg.txt";
         parseFile(file, fd);
-        file = "resources/freenas.glabel.status.txt";
+        file = "resources/" + glabelFile;
         parseFile(file, fd);
         return fd.getDevices();
     }
 
-    private Set<Device> getDectectedDevices() {
-        Map<String, Device> devicesMap = getDeviceMapping();
+    private Set<Device> getDectectedDevices(String glabelFile) {
+        Map<String, Device> devicesMap = getDeviceMapping(glabelFile);
         Set<Device> devices = new TreeSet<Device>();
         devices.addAll(devicesMap.values());
         return devices;
@@ -48,7 +48,7 @@ public class FreeBSDPoolTest extends TestParent {
 
     @Test
     public void testZPoolStatus1() {
-        HOST.setDevices(getDectectedDevices());
+        HOST.setDevices(getDectectedDevices("freenas.glabel.status.txt"));
         ZPOOLDetector fd = new CommonZPOOLDetector(HOST);
         String file = "resources/freenas.zpool.status1.txt";
         parseFile(file, fd);
@@ -66,7 +66,7 @@ public class FreeBSDPoolTest extends TestParent {
 
     @Test
     public void testZPoolStatus2() {
-        HOST.setDevices(getDectectedDevices());
+        HOST.setDevices(getDectectedDevices("freenas.glabel.status.txt"));
         ZPOOLDetector fd = new CommonZPOOLDetector(HOST);
         String file = "resources/freenas.zpool.status2.txt";
         parseFile(file, fd);
@@ -84,20 +84,19 @@ public class FreeBSDPoolTest extends TestParent {
 
     @Test
     public void testZPoolStatus3() {
-        HOST.setDevices(getDectectedDevices());
+        HOST.setDevices(getDectectedDevices("freenas.glabel.status.txt"));
         ZPOOLDetector fd = new CommonZPOOLDetector(HOST);
         String file = "resources/freenas.zpool.status3.txt";
         parseFile(file, fd);
-        //debug(fd.getPools(), "zPools");
         ZPOOL zPool = (ZPOOL) get(0, fd.getPools());
-        checkPool(zPool, TANK, Pool.Type.RAIDZ1, 1, 3);
-        zPool = (ZPOOL) get(1, fd.getPools());
         checkPool(zPool, TANK_3, Pool.Type.STRIPED, 1, 1);
+        zPool = (ZPOOL) get(1, fd.getPools());
+        checkPool(zPool, TANK, Pool.Type.RAIDZ1, 1, 3);
     }
 
     @Test
     public void testZPoolStatus4() {
-        HOST.setDevices(getDectectedDevices());
+        HOST.setDevices(getDectectedDevices("freenas.glabel.status.txt"));
         ZPOOLDetector fd = new CommonZPOOLDetector(HOST);
         String file = "resources/freenas.zpool.status4.txt";
         parseFile(file, fd);
@@ -113,19 +112,18 @@ public class FreeBSDPoolTest extends TestParent {
         assertTrue("should be 3, but were " + subPool.devices.size(), subPool.devices.size() == 3);
     }
 
-/*
-FIXME: This Status fails:
-      raidz1-0                                        ONLINE       0     0     0
-        spare-0                                       ONLINE       0     0     0
-*/
+    /*
+     FIXME: This Status fails:
+     raidz1-0                                        ONLINE       0     0     0
+     spare-0                                       ONLINE       0     0     0
+     */
 //    @Test
     public void testZPoolStatus5() {
-        HOST.setDevices(getDectectedDevices());
+        HOST.setDevices(getDectectedDevices("freenas.glabel.status.txt"));
         ZPOOLDetector fd = new CommonZPOOLDetector(HOST);
         String file = "resources/freenas.zpool.status5.txt";
         parseFile(file, fd);
         ZPOOL zPool = (ZPOOL) first(fd.getPools());
-        debug(zPool, "zPool");
         assertTrue(zPool != null);
         assertTrue(TANK.equals(zPool.name));
         assertTrue(zPool.pools.size() == 1);
@@ -134,6 +132,22 @@ FIXME: This Status fails:
         assertTrue(subPool != null);
         assertTrue(subPool.type.equals(Pool.Type.RAIDZ1));
         assertTrue("should be 3, but were " + subPool.devices.size(), subPool.devices.size() == 3);
+    }
+
+    public void testZPoolStatus6() {
+        HOST.setDevices(getDectectedDevices("freenas.glabel.status2.txt"));
+        ZPOOLDetector fd = new CommonZPOOLDetector(HOST);
+        String file = "resources/freenas.zpool.status6.txt";
+        parseFile(file, fd);
+        ZPOOL zPool = (ZPOOL) first(fd.getPools());
+        assertTrue(zPool != null);
+        assertTrue(TANK.equals(zPool.name));
+        assertTrue(zPool.pools.size() == 1);
+        Pool subPool = (Pool) first(zPool.pools);
+        debug(zPool.pools, "freenas.zpool.status6.txt: zPool.pools");
+        assertTrue(subPool != null);
+        assertTrue(subPool.type.equals(Pool.Type.RAIDZ1));
+        assertTrue("should be 5, but were " + subPool.devices.size(), subPool.devices.size() == 5);
     }
 
     private void checkPool(ZPOOL zPool, String poolName, Pool.Type poolType, int poolSize, int devicesSize) {
