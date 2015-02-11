@@ -104,8 +104,8 @@ public class CommonDeviceDetector implements DeviceDetector {
         if (end > start && start > 0) {
             Device device;
             currentDeviceName = line.substring(start + 1, end).trim();
-            // we need to find a better conversion.
-            if (line.indexOf(CommonKeys.IDE_HDD) > -1) {
+            // TODO we need to find a better conversion.
+            if (line.contains(CommonKeys.IDE_HDD)) {
                 device = new Device(currentDeviceName, Device.IDE_HDD);
             } else {
                 device = new Device(currentDeviceName, Device.SCSI_HDD);
