@@ -89,9 +89,9 @@ public class FreeBSDPoolTest extends TestParent {
         String file = "resources/freenas.zpool.status3.txt";
         parseFile(file, fd);
         //debug(fd.getPools(), "zPools");
-        ZPOOL zPool = (ZPOOL) get(0, fd.getPools());
+        ZPOOL zPool = (ZPOOL) get(1, fd.getPools());
         checkPool(zPool, TANK, Pool.Type.RAIDZ1, 1, 3);
-        zPool = (ZPOOL) get(1, fd.getPools());
+        zPool = (ZPOOL) get(0, fd.getPools());
         checkPool(zPool, TANK_3, Pool.Type.STRIPED, 1, 1);
     }
 
