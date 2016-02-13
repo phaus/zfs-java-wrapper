@@ -1,0 +1,10 @@
+                                      Name  Status  Components
+gptid/c60eb3ad-842e-11e3-87f0-3c4a92744a81     N/A  ada0p2
+gptid/0505744f-838f-11e3-87f0-3c4a92744a81     N/A  ada2p2
+gptid/0464edaf-838f-11e3-87f0-3c4a92744a81     N/A  ada3p2
+                             ufs/FreeNASs3     N/A  da0s3
+                             ufs/FreeNASs4     N/A  da0s4
+                    ufsid/521c684590455604     N/A  da0s1a
+                            ufs/FreeNASs1a     N/A  da0s1a
+                            ufs/FreeNASs2a     N/A  da0s2a
+gptid/7a6cd6a7-8cd8-11e3-9ae2-3c4a92744a81     N/A  ada1p2
