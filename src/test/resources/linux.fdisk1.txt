@@ -1,0 +1,151 @@
+
+Warnung: GPT (GUID-Partitionstabelle) auf '/dev/sda' erkannt! Das Hilfsprogramm Fdisk unterstützt GPT nicht. Verwenden Sie GNU Parted.
+
+
+Disk /dev/sda: 1000.2 GB, 1000171331584 bytes
+256 Köpfe, 63 Sektoren/Spur, 121122 Zylinder, zusammen 1953459632 Sektoren
+Einheiten = Sektoren von 1 × 512 = 512 Bytes
+Sector size (logical/physical): 512 bytes / 4096 bytes
+I/O size (minimum/optimal): 4096 bytes / 4096 bytes
+Festplattenidentifikation: 0x00000000
+
+   Gerät  boot.     Anfang        Ende     Blöcke   Id  System
+/dev/sda1               1  1953459631   976729815+  ee  GPT
+Partition 1 beginnt nicht an einer physikalischen Sektorgrenze.
+
+Warnung: GPT (GUID-Partitionstabelle) auf '/dev/sdb' erkannt! Das Hilfsprogramm Fdisk unterstützt GPT nicht. Verwenden Sie GNU Parted.
+
+
+Disk /dev/sdb: 1000.2 GB, 1000171331584 bytes
+256 Köpfe, 63 Sektoren/Spur, 121122 Zylinder, zusammen 1953459632 Sektoren
+Einheiten = Sektoren von 1 × 512 = 512 Bytes
+Sector size (logical/physical): 512 bytes / 4096 bytes
+I/O size (minimum/optimal): 4096 bytes / 4096 bytes
+Festplattenidentifikation: 0x00000000
+
+   Gerät  boot.     Anfang        Ende     Blöcke   Id  System
+/dev/sdb1               1  1953459631   976729815+  ee  GPT
+Partition 1 beginnt nicht an einer physikalischen Sektorgrenze.
+
+Warnung: GPT (GUID-Partitionstabelle) auf '/dev/sdc' erkannt! Das Hilfsprogramm Fdisk unterstützt GPT nicht. Verwenden Sie GNU Parted.
+
+
+Disk /dev/sdc: 256.0 GB, 256022937600 bytes
+256 Köpfe, 63 Sektoren/Spur, 31004 Zylinder, zusammen 500044800 Sektoren
+Einheiten = Sektoren von 1 × 512 = 512 Bytes
+Sector size (logical/physical): 512 bytes / 4096 bytes
+I/O size (minimum/optimal): 4096 bytes / 4096 bytes
+Festplattenidentifikation: 0x00000000
+
+   Gerät  boot.     Anfang        Ende     Blöcke   Id  System
+/dev/sdc1               1   500044799   250022399+  ee  GPT
+Partition 1 beginnt nicht an einer physikalischen Sektorgrenze.
+
+Warnung: GPT (GUID-Partitionstabelle) auf '/dev/sdd' erkannt! Das Hilfsprogramm Fdisk unterstützt GPT nicht. Verwenden Sie GNU Parted.
+
+
+Disk /dev/sdd: 250.0 GB, 250023444480 bytes
+256 Köpfe, 63 Sektoren/Spur, 30278 Zylinder, zusammen 488327040 Sektoren
+Einheiten = Sektoren von 1 × 512 = 512 Bytes
+Sector size (logical/physical): 512 bytes / 4096 bytes
+I/O size (minimum/optimal): 4096 bytes / 4096 bytes
+Festplattenidentifikation: 0x00000000
+
+   Gerät  boot.     Anfang        Ende     Blöcke   Id  System
+/dev/sdd1               1   488327039   244163519+  ee  GPT
+Partition 1 beginnt nicht an einer physikalischen Sektorgrenze.
+
+Warnung: GPT (GUID-Partitionstabelle) auf '/dev/sde' erkannt! Das Hilfsprogramm Fdisk unterstützt GPT nicht. Verwenden Sie GNU Parted.
+
+
+Disk /dev/sde: 1000.2 GB, 1000171331584 bytes
+256 Köpfe, 63 Sektoren/Spur, 121122 Zylinder, zusammen 1953459632 Sektoren
+Einheiten = Sektoren von 1 × 512 = 512 Bytes
+Sector size (logical/physical): 512 bytes / 4096 bytes
+I/O size (minimum/optimal): 4096 bytes / 4096 bytes
+Festplattenidentifikation: 0x00000000
+
+   Gerät  boot.     Anfang        Ende     Blöcke   Id  System
+/dev/sde1               1  1953459631   976729815+  ee  GPT
+Partition 1 beginnt nicht an einer physikalischen Sektorgrenze.
+
+Warnung: GPT (GUID-Partitionstabelle) auf '/dev/sdg' erkannt! Das Hilfsprogramm Fdisk unterstützt GPT nicht. Verwenden Sie GNU Parted.
+
+
+Disk /dev/sdg: 256.0 GB, 256022937600 bytes
+256 Köpfe, 63 Sektoren/Spur, 31004 Zylinder, zusammen 500044800 Sektoren
+Einheiten = Sektoren von 1 × 512 = 512 Bytes
+Sector size (logical/physical): 512 bytes / 4096 bytes
+I/O size (minimum/optimal): 4096 bytes / 4096 bytes
+Festplattenidentifikation: 0x00000000
+
+   Gerät  boot.     Anfang        Ende     Blöcke   Id  System
+/dev/sdg1               1   500044799   250022399+  ee  GPT
+Partition 1 beginnt nicht an einer physikalischen Sektorgrenze.
+
+Warnung: GPT (GUID-Partitionstabelle) auf '/dev/sdf' erkannt! Das Hilfsprogramm Fdisk unterstützt GPT nicht. Verwenden Sie GNU Parted.
+
+
+Disk /dev/sdf: 1000.2 GB, 1000171331584 bytes
+256 Köpfe, 63 Sektoren/Spur, 121122 Zylinder, zusammen 1953459632 Sektoren
+Einheiten = Sektoren von 1 × 512 = 512 Bytes
+Sector size (logical/physical): 512 bytes / 4096 bytes
+I/O size (minimum/optimal): 4096 bytes / 4096 bytes
+Festplattenidentifikation: 0x00000000
+
+   Gerät  boot.     Anfang        Ende     Blöcke   Id  System
+/dev/sdf1               1  1953459631   976729815+  ee  GPT
+Partition 1 beginnt nicht an einer physikalischen Sektorgrenze.
+
+Platte /dev/sdh: 7948 MByte, 7948206080 Byte
+245 Köpfe, 62 Sektoren/Spur, 1021 Zylinder, zusammen 15523840 Sektoren
+Einheiten = Sektoren von 1 × 512 = 512 Bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Festplattenidentifikation: 0x000de753
+
+   Gerät  boot.     Anfang        Ende     Blöcke   Id  System
+/dev/sdh1   *        2048      499711      248832   83  Linux
+/dev/sdh2          501758    15521791     7510017    5  Erweiterte
+/dev/sdh5          501760    15521791     7510016   8e  Linux LVM
+
+Platte /dev/mapper/dl380--vg-root: 2428 MByte, 2428502016 Byte
+255 Köpfe, 63 Sektoren/Spur, 295 Zylinder, zusammen 4743168 Sektoren
+Einheiten = Sektoren von 1 × 512 = 512 Bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Festplattenidentifikation: 0x00000000
+
+Festplatte /dev/mapper/dl380--vg-root enthält keine gültige Partitionstabelle
+
+Platte /dev/mapper/dl380--vg-swap_1: 293 MByte, 293601280 Byte
+255 Köpfe, 63 Sektoren/Spur, 35 Zylinder, zusammen 573440 Sektoren
+Einheiten = Sektoren von 1 × 512 = 512 Bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Festplattenidentifikation: 0x00000000
+
+Festplatte /dev/mapper/dl380--vg-swap_1 enthält keine gültige Partitionstabelle
+
+Platte /dev/mapper/dl380--vg-home: 4966 MByte, 4966055936 Byte
+255 Köpfe, 63 Sektoren/Spur, 603 Zylinder, zusammen 9699328 Sektoren
+Einheiten = Sektoren von 1 × 512 = 512 Bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Festplattenidentifikation: 0x00000000
+
+Festplatte /dev/mapper/dl380--vg-home enthält keine gültige Partitionstabelle
+
+Warnung: GPT (GUID-Partitionstabelle) auf '/dev/sdi' erkannt! Das Hilfsprogramm Fdisk unterstützt GPT nicht. Verwenden Sie GNU Parted.
+
+
+Disk /dev/sdi: 250.0 GB, 250023444480 bytes
+256 Köpfe, 63 Sektoren/Spur, 30278 Zylinder, zusammen 488327040 Sektoren
+Einheiten = Sektoren von 1 × 512 = 512 Bytes
+Sector size (logical/physical): 512 bytes / 4096 bytes
+I/O size (minimum/optimal): 4096 bytes / 4096 bytes
+Festplattenidentifikation: 0x32504733
+
+   Gerät  boot.     Anfang        Ende     Blöcke   Id  System
+/dev/sdi1               1   488327039   244163519+  ee  GPT
+Partition 1 beginnt nicht an einer physikalischen Sektorgrenze.

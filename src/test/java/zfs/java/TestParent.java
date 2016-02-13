@@ -12,7 +12,6 @@ import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.codehaus.jackson.map.ObjectMapper;
-import zfs.java.models.ZPOOL;
 
 /**
  * TestParent 20.10.2012
@@ -67,6 +66,20 @@ public class TestParent {
         return null;
     }
 
+    protected Object get(Object targetKey, final Object collection) {
+        if (collection != null) {
+            if (collection instanceof Map) {
+                Map map = (Map) collection;
+                for(Object key : map.keySet()){
+                    if(key.equals(targetKey)){
+                        return map.get(key);
+                    }
+                }
+            }
+        }
+        return null;
+    }
+    
     protected Object first(final Object collection) {
         return get(0, collection);
     }
