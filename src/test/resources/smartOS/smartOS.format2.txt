@@ -1,0 +1,9 @@
+Searching for disks...done
+
+
+AVAILABLE DISK SELECTIONS:
+       0. c1t0d0 <VMware,-VMware Virtual S-1.0-250.00GB>
+          /pci@0,0/pci15ad,1976@10/sd@0,0
+       1. c1t1d0 <VMware,-VMware Virtual S-1.0-250.00GB>
+          /pci@0,0/pci15ad,1976@10/sd@1,0
+Specify disk (enter its number):
