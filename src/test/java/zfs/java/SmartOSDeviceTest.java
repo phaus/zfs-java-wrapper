@@ -16,7 +16,7 @@ import zfs.java.models.Host;
 
 public class SmartOSDeviceTest extends TestParent {
 
-    private static Host HOST = new Host("root", "localhost");
+    private static final Host HOST = new Host("root", "localhost");
     private Map<String, Device> devices = null;
 
     private void dectectDevices(final String file) {
@@ -27,13 +27,19 @@ public class SmartOSDeviceTest extends TestParent {
 
     @Test
     public void testDeviceListing1() {
-        dectectDevices("resources/smartOS.format1.txt");
+        dectectDevices("resources/smartOS/smartOS.format1.txt");
         assertTrue(devices.size() == 2);
     }
 
     @Test
     public void testDeviceListing2() {
-        dectectDevices("resources/smartOS.format2.txt");
+        dectectDevices("resources/smartOS/smartOS.format2.txt");
         assertTrue(devices.size() == 2);
     }
+    
+    @Test
+    public void testDeviceListing3() {
+        dectectDevices("resources/smartOS/smartOS.format3.txt");
+        assertTrue(devices.size() == 8);
+    }    
 }

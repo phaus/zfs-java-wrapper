@@ -16,7 +16,7 @@ import zfs.java.models.Host;
  */
 public class SolarisDeviceTest extends TestParent {
 
-    private static Host HOST = new Host("root", "localhost");
+    private static final Host HOST = new Host("root", "localhost");
     private Map<String, Device> devices = null;
 
     private void dectectDevices(final String file) {
@@ -27,19 +27,19 @@ public class SolarisDeviceTest extends TestParent {
 
     @Test
     public void testDeviceListing1() {
-        dectectDevices("resources/openindiana.format1.txt");
+        dectectDevices("resources/openindiana/openindiana.format1.txt");
         assertTrue(devices.size() == 10);
     }
 
     @Test
     public void testDeviceListing2() {
-        dectectDevices("resources/openindiana.format2.txt");
+        dectectDevices("resources/openindiana/openindiana.format2.txt");
         assertTrue(devices.size() == 48);
     }
 
     @Test
     public void testDeviceListing3() {
-        dectectDevices("resources/solaris.format3.txt");
+        dectectDevices("resources/solaris/solaris.format3.txt");
         assertTrue(devices.size() == 28);
     }
 }

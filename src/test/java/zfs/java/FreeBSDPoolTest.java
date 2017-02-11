@@ -23,7 +23,6 @@ import zfs.java.models.ZPOOL;
  */
 public class FreeBSDPoolTest extends TestParent {
 
-    private static final Logger LOG = Logger.getLogger(FreeBSDPoolTest.class.getName());
     private static final Host HOST = new Host("root", "localhost");
     private static final String TANK = "tank";
     private static final String TANK_2 = "tank2";
@@ -32,9 +31,9 @@ public class FreeBSDPoolTest extends TestParent {
     private Map<String, Device> getDeviceMapping(String glabelFile) {
         DeviceDetector fd = new FreeBSDDeviceDetector(HOST);
         String file;
-        file = "resources/freenas.dmesg.txt";
+        file = "resources/freenas/freenas.dmesg.txt";
         parseFile(file, fd);
-        file = "resources/" + glabelFile;
+        file = "resources/freenas/" + glabelFile;
         parseFile(file, fd);
         return fd.getDevices();
     }
@@ -55,9 +54,9 @@ public class FreeBSDPoolTest extends TestParent {
 
     @Test
     public void testZPoolStatus1() {
-        HOST.setDevices(getDectectedDevices("resources/freenas.dmesg.txt", "resources/freenas.glabel.status.txt"));
+        HOST.setDevices(getDectectedDevices("resources/freenas/freenas.dmesg.txt", "resources/freenas/freenas.glabel.status.txt"));
         ZPOOLDetector fd = new CommonZPOOLDetector(HOST);
-        String file = "resources/freenas.zpool.status1.txt";
+        String file = "resources/freenas/freenas.zpool.status1.txt";
         parseFile(file, fd);
         ZPOOL zPool = (ZPOOL) first(fd.getPools());
         debug(zPool, "zPool");
@@ -73,9 +72,9 @@ public class FreeBSDPoolTest extends TestParent {
 
     @Test
     public void testZPoolStatus2() {
-        HOST.setDevices(getDectectedDevices("resources/freenas.dmesg.txt", "resources/freenas.glabel.status.txt"));
+        HOST.setDevices(getDectectedDevices("resources/freenas/freenas.dmesg.txt", "resources/freenas/freenas.glabel.status.txt"));
         ZPOOLDetector fd = new CommonZPOOLDetector(HOST);
-        String file = "resources/freenas.zpool.status2.txt";
+        String file = "resources/freenas/freenas.zpool.status2.txt";
         parseFile(file, fd);
         ZPOOL zPool = (ZPOOL) first(fd.getPools());
         debug(zPool, "zPool");
@@ -91,9 +90,9 @@ public class FreeBSDPoolTest extends TestParent {
 
     @Test
     public void testZPoolStatus3() {
-        HOST.setDevices(getDectectedDevices("resources/freenas.dmesg.txt", "resources/freenas.glabel.status.txt"));
+        HOST.setDevices(getDectectedDevices("resources/freenas/freenas.dmesg.txt", "resources/freenas/freenas.glabel.status.txt"));
         ZPOOLDetector fd = new CommonZPOOLDetector(HOST);
-        String file = "resources/freenas.zpool.status3.txt";
+        String file = "resources/freenas/freenas.zpool.status3.txt";
         parseFile(file, fd);
         //debug(fd.getPools(), "zPools");
         ZPOOL zPool = (ZPOOL) get(1, fd.getPools());
@@ -104,9 +103,9 @@ public class FreeBSDPoolTest extends TestParent {
 
     @Test
     public void testZPoolStatus4() {
-        HOST.setDevices(getDectectedDevices("resources/freenas.dmesg.txt", "resources/freenas.glabel.status.txt"));
+        HOST.setDevices(getDectectedDevices("resources/freenas/freenas.dmesg.txt", "resources/freenas/freenas.glabel.status.txt"));
         ZPOOLDetector fd = new CommonZPOOLDetector(HOST);
-        String file = "resources/freenas.zpool.status4.txt";
+        String file = "resources/freenas/freenas.zpool.status4.txt";
         parseFile(file, fd);
         ZPOOL zPool = (ZPOOL) first(fd.getPools());
         debug(zPool, "zPool");
@@ -125,9 +124,9 @@ public class FreeBSDPoolTest extends TestParent {
 //    @Test
 
     public void testZPoolStatusWithCache() {
-        HOST.setDevices(getDectectedDevices("resources/freenas.dmesg2.txt", "resources/freenas.glabel.status2.txt"));
+        HOST.setDevices(getDectectedDevices("resources/freenas/freenas.dmesg2.txt", "resources/freenas/freenas.glabel.status2.txt"));
         ZPOOLDetector fd = new CommonZPOOLDetector(HOST);
-        String file = "resources/freenas.zpool.status6.txt";
+        String file = "resources/freenas/freenas.zpool.status6.txt";
         parseFile(file, fd);
         ZPOOL zPool = (ZPOOL) first(fd.getPools());
         debug(zPool, "zPool");
@@ -150,9 +149,9 @@ public class FreeBSDPoolTest extends TestParent {
      */
 //    @Test
     public void testZPoolStatus5() {
-        HOST.setDevices(getDectectedDevices("resources/freenas.dmesg.txt", "resources/freenas.glabel.status.txt"));
+        HOST.setDevices(getDectectedDevices("resources/freenas/freenas.dmesg.txt", "resources/freenas/freenas.glabel.status.txt"));
         ZPOOLDetector fd = new CommonZPOOLDetector(HOST);
-        String file = "resources/freenas.zpool.status5.txt";
+        String file = "resources/freenas/freenas.zpool.status5.txt";
         parseFile(file, fd);
         ZPOOL zPool = (ZPOOL) first(fd.getPools());
         assertTrue(zPool != null);

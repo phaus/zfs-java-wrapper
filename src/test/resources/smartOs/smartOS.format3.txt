@@ -1,0 +1,21 @@
+Searching for disks...done
+
+
+AVAILABLE DISK SELECTIONS:
+       0. c1t0d0 <WDC-WD40EZRX-00SPEB0-80.00A80-3.64TB>
+          /pci@0,0/pci8086,1f12@3/pci10b5,8608@0/pci10b5,8608@1/pci1849,9172@0/disk@0,0
+       1. c1t1d0 <WDC-WD40EZRX-00SPEB0-80.00A80-3.64TB>
+          /pci@0,0/pci8086,1f12@3/pci10b5,8608@0/pci10b5,8608@1/pci1849,9172@0/disk@1,0
+       2. c2t0d0 <WDC-WD40EZRX-00SPEB0-80.00A80-3.64TB>
+          /pci@0,0/pci8086,1f13@4/pci1849,9230@0/disk@0,0
+       3. c2t1d0 <WDC-WD40EFRX-68WT0N0-82.00A82-3.64TB>
+          /pci@0,0/pci8086,1f13@4/pci1849,9230@0/disk@1,0
+       4. c2t2d0 <WDC-WD40EFRX-68WT0N0-82.00A82-3.64TB>
+          /pci@0,0/pci8086,1f13@4/pci1849,9230@0/disk@2,0
+       5. c2t3d0 <WDC-WD40EFRX-68WT0N0-82.00A82-3.64TB>
+          /pci@0,0/pci8086,1f13@4/pci1849,9230@0/disk@3,0
+       6. c4t0d0 <WDC-WD40EZRX-00SPEB0-80.00A80-3.64TB>
+          /pci@0,0/pci1849,1f32@18/disk@0,0
+       7. c4t1d0 <WDC-WD40EZRX-00SPEB0-80.00A80-3.64TB>
+          /pci@0,0/pci1849,1f32@18/disk@1,0
+Specify disk (enter its number):
