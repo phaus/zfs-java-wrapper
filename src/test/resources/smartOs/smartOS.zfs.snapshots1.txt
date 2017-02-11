@@ -1,6 +1,0 @@
-NAME                                                                              USED  AVAIL  REFER  MOUNTPOINT
-zones/1c27c1a4-542d-11e2-991f-cbaf8fd7b428@final                                     0      -  21,8M  -
-zones/37d3cef6-01a6-4b25-a927-928cc2681744-disk0@dataset                         25,7M      -  7,36G  -
-zones/77162147-ff0d-4817-8db0-6590f19953ac@8c9999d5-7e7c-47d4-80b0-e7b06b4bbe43  85,5K      -  1,70G  -
-zones/857ea9a0-f965-11e2-b778-0800200c9a66@final                                     0      -  7,36G  -
-zones/fdea06b0-3f24-11e2-ac50-0b645575ce9d@final                                     0      -   372M  -
