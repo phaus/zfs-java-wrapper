@@ -25,7 +25,9 @@ errors: No known data errors
 
   pool: zones
  state: ONLINE
-  scan: resilvered 671G in 2h43m with 0 errors on Wed Jan  4 22:45:47 2017
+  scan: scrub in progress since Sun Feb 12 11:08:16 2017
+    38,0G scanned out of 5,81T at 100M/s, 16h46m to go
+    0 repaired, 0,64% done
 config:
 
 	NAME        STATE     READ WRITE CKSUM
